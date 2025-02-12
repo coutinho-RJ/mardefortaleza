@@ -1,0 +1,31 @@
+[gd_scene load_steps=3 format=3 uid="uid://isywsonkg0e8"]
+
+[ext_resource type="Material" uid="uid://x3ocuaww1xje" path="res://mardefortaleza01.tres" id="1_ex773"]
+
+[sub_resource type="Curve3D" id="Curve3D_gx6o6"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0.0624912, 0, -8.5919, -3.86082, 0, -7.28774, 3.86082, 0, 7.28774, 6.49307, 0, -4.38424, 0, 0, 0, 0, 0, 0, 6.72486, 0, 3.25002, 0, 0, 0, 0, 0, 0, 0.0433271, 0, 7.3348, 0, 0, 0, 0, 0, 0, -6.52149, 0, 3.39591, 0, 0, 0, 0, 0, 0, -6.57985, 0, -4.4527, 0, 0, 0, 0, 0, 0, 0.0624912, 0, -8.5919),
+"tilts": PackedFloat32Array(0, 0, 0, 0, 0, 0, 0)
+}
+point_count = 7
+
+[node name="Mar de Fortaleza" type="Node3D"]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0, 0, 0)
+
+[node name="Path3D" type="Path3D" parent="."]
+curve = SubResource("Curve3D_gx6o6")
+
+[node name="CSGPolygon3D" type="CSGPolygon3D" parent="Path3D"]
+use_collision = true
+polygon = PackedVector2Array(-10, 0, -10, 0.5, 0.5, 0.5, 0.5, 0)
+mode = 2
+path_node = NodePath("..")
+path_interval_type = 0
+path_interval = 1.0
+path_simplify_angle = 0.0
+path_rotation = 2
+path_local = false
+path_continuous_u = true
+path_u_distance = 1.0
+path_joined = false
+material = ExtResource("1_ex773")
