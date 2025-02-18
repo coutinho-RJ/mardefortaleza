@@ -1,8 +1,9 @@
-[gd_scene load_steps=7 format=4 uid="uid://dvihg5ersqjj8"]
+[gd_scene load_steps=8 format=4 uid="uid://dvihg5ersqjj8"]
+
+[ext_resource type="Script" path="res://jangada_do_cara.gd" id="1_y276y"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ob80x"]
 resource_name = "02___Default"
-albedo_color = Color(1, 1, 1, 1)
 roughness = 0.99
 emission_enabled = true
 
@@ -103,11 +104,14 @@ shadow_mesh = SubResource("ArrayMesh_huv35")
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_112qd"]
 points = PackedVector3Array(-41.0105, 14.3867, -20.0595, -35.6456, 0, -17.2014, -41.0105, 14.3867, 18.9494, -41.0105, 15.6713, -20.0595, -18.3123, 14.3867, -22.7741, -15.1196, 0, -19.3678, -35.6456, 0, 16.0912, -18.3123, 14.3867, 21.6683, -41.0105, 15.6713, 18.9494, -18.3123, 15.6713, -22.7741, -27.1491, 53.9717, 0.434612, 0.879101, 109.346, 0.0778885, 0.966335, 109.346, -0.06567, 1.08846, 109.346, -0.174427, 1.24548, 109.346, -0.23098, 34.9962, 14.3867, -15.6701, 31.8034, 0, -12.9251, -15.1196, 0, 18.2577, 34.9962, 14.3867, 14.5599, -18.3123, 15.6713, 21.6683, 1.24548, 109.346, 0.71303, 1.08846, 109.346, 0.656475, 0.966335, 109.346, 0.547718, 0.879101, 109.346, 0.40416, -27.1491, 53.9717, 0.482464, 34.9962, 15.6713, -15.6701, 1.41123, 109.346, -0.23098, 14.5486, 105.289, -0.696459, 27.9739, 105.289, 0.0126343, 0.852932, 109.346, 0.2432, 48.1074, 14.3867, -0.5529, 42.8559, 0, -0.5529, 31.8034, 0, 11.8149, 34.9962, 15.6713, 14.5599, 27.9739, 105.289, 0.347607, 21.2569, 105.289, 1.13936, 1.41123, 109.346, 0.71303, 48.1074, 15.6713, -0.5529, 1.56825, 109.346, -0.174427, 1.6991, 109.346, -0.06567, 1.77761, 109.346, 0.0778885, 1.8125, 109.346, 0.2432, 1.77761, 109.346, 0.40416, 1.6991, 109.346, 0.547718, 1.56825, 109.346, 0.656475)
 
-[node name="Jangada do cara" type="VehicleBody3D"]
+[node name="Jangada do cara" type="CharacterBody3D"]
+script = ExtResource("1_y276y")
 
 [node name="Pyramid002" type="MeshInstance3D" parent="."]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 0)
 mesh = SubResource("ArrayMesh_xdx8n")
 skeleton = NodePath("")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 0, 0)
 shape = SubResource("ConvexPolygonShape3D_112qd")

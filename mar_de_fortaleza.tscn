@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://isywsonkg0e8"]
+[gd_scene load_steps=7 format=3 uid="uid://isywsonkg0e8"]
 
 [ext_resource type="Material" uid="uid://x3ocuaww1xje" path="res://mardefortaleza01.tres" id="1_ex773"]
+[ext_resource type="PackedScene" uid="uid://dvihg5ersqjj8" path="res://jangada_do_cara.tscn" id="2_xrof0"]
 
 [sub_resource type="Curve3D" id="Curve3D_gx6o6"]
 _data = {
@@ -9,6 +10,16 @@ _data = {
 }
 point_count = 7
 
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_ragl5"]
+sky_energy_multiplier = 1.54
+
+[sub_resource type="Sky" id="Sky_2vo5h"]
+sky_material = SubResource("ProceduralSkyMaterial_ragl5")
+
+[sub_resource type="Environment" id="Environment_gkm6i"]
+background_mode = 2
+sky = SubResource("Sky_2vo5h")
+
 [node name="Mar de Fortaleza" type="Node3D"]
 transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0, 0, 0)
 
@@ -16,7 +27,6 @@ transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0, 0, 0)
 curve = SubResource("Curve3D_gx6o6")
 
 [node name="CSGPolygon3D" type="CSGPolygon3D" parent="Path3D"]
-use_collision = true
 polygon = PackedVector2Array(-10, 0, -10, 0.5, 0.5, 0.5, 0.5, 0)
 mode = 2
 path_node = NodePath("..")
@@ -29,3 +39,14 @@ path_continuous_u = true
 path_u_distance = 1.0
 path_joined = false
 material = ExtResource("1_ex773")
+
+[node name="Jangada do cara" parent="." instance=ExtResource("2_xrof0")]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 1.97024, -2.80636)
+
+[node name="Camera3D" type="Camera3D" parent="Jangada do cara"]
+transform = Transform3D(1, 0, 0, 0, 0.945012, 0.327036, 0, -0.327036, 0.945012, 34.3977, 81.3767, 116.337)
+fov = 62.7
+near = 0.015
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_gkm6i")
