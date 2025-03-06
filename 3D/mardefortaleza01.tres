@@ -1,0 +1,11 @@
+[gd_resource type="ShaderMaterial" load_steps=3 format=3 uid="uid://x3ocuaww1xje"]
+
+[ext_resource type="Shader" path="res://mardefortaleza01.gdshader" id="1_snkgs"]
+[ext_resource type="Texture2D" uid="uid://bc0qh5jeyd6k4" path="res://Imagem oceano.jpg" id="2_g6v4e"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_snkgs")
+shader_parameter/road_witdh = 4.0
+shader_parameter/texture_repeat = 0.0
+shader_parameter/imgTexture = ExtResource("2_g6v4e")

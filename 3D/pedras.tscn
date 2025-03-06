@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://1dwrkn52my4j"]
+
+[ext_resource type="PackedScene" uid="uid://hfgkpd7l0in8" path="res://GLB Piratas/rocks-a.glb" id="1_51a05"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_q8bhf"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_5rg8h"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_b8a4i"]
+points = PackedVector3Array(2.5, 2.5, 2.5, 2.5, 2.5, -2.5, -2.5, 2.5, 2.5, 2.5, -2.5, 2.5, 2.5, -2.5, -2.5, -2.5, 2.5, -2.5, -2.5, -2.5, 2.5, -2.5, -2.5, -2.5)
+
+[node name="Pedras" type="Node3D"]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -0.0390358, 0.149036, -0.0714521)
+
+[node name="rocks-a2" parent="." instance=ExtResource("1_51a05")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0.625334, 0.221298, 0.714304)
+top_level = true
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="rocks-a2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.136396, 0)
+shape = SubResource("BoxShape3D_q8bhf")
+disabled = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="rocks-a2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.428892, 0.480019, -0.0645103)
+mesh = SubResource("BoxMesh_5rg8h")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="rocks-a2/MeshInstance3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="rocks-a2/MeshInstance3D/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_b8a4i")

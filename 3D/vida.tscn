@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://b5vkxrxakbsnu"]
+
+[ext_resource type="Texture2D" uid="uid://u6u70quqksrb" path="res://HUD/VIDA/0/000.png" id="1_uyq87"]
+[ext_resource type="Texture2D" uid="uid://bf1bbl11pvrl1" path="res://HUD/VIDA/3/000.png" id="2_wcu5b"]
+[ext_resource type="Texture2D" uid="uid://bo6tf4yyjf8xn" path="res://HUD/VIDA/2/000.png" id="3_ixube"]
+
+[node name="Vida" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+value = 4.0
+texture_under = ExtResource("1_uyq87")
+texture_over = ExtResource("2_wcu5b")
+texture_progress = ExtResource("3_ixube")

@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://lfgrdq35ctbp"]
+
+[ext_resource type="Script" path="res://madeira.gd" id="1_fws0y"]
+[ext_resource type="PackedScene" uid="uid://ch8txmj3f7v5e" path="res://GLB Piratas/platform-planks.glb" id="1_pdih6"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_dygxh"]
+size = Vector3(2.15201, 0.831055, 2.85802)
+
+[node name="Madeira" type="Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.3716, -0.227729, 1.90735e-06)
+script = ExtResource("1_fws0y")
+
+[node name="platform-planks2" parent="." instance=ExtResource("1_pdih6")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0965118, 0.16748, -0.0139542)
+shape = SubResource("BoxShape3D_dygxh")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
