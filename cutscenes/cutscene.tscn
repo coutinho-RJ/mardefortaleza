@@ -1,0 +1,33 @@
+[gd_scene load_steps=3 format=3 uid="uid://bj7nq88e4co6g"]
+
+[ext_resource type="Script" path="res://cutscenes/cutscene.gd" id="1_57kj8"]
+[ext_resource type="Texture2D" uid="uid://coaigpp0dunpl" path="res://cutscenes/image/dragão_do_mar.jpg" id="2_ms7y0"]
+
+[node name="cutscene" type="Control"]
+z_index = 2
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_57kj8")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 742.0
+offset_bottom = 382.0
+texture = ExtResource("2_ms7y0")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 0
+offset_top = 233.0
+offset_right = 740.0
+offset_bottom = 383.0
+
+[node name="Label" type="Label" parent="Panel"]
+layout_mode = 0
+offset_right = 744.0
+offset_bottom = 152.0
+
+[node name="texttimer" type="Timer" parent="."]
+wait_time = 0.1
+one_shot = true
+
+[connection signal="timeout" from="texttimer" to="." method="_on_texttimer_timeout"]

@@ -1,0 +1,104 @@
+[gd_scene load_steps=10 format=3 uid="uid://capo8nbctq4r7"]
+
+[ext_resource type="Texture2D" uid="uid://c7c6s4ngtqayk" path="res://sprites/Boat/floss-idle-with-sail-transp.png" id="1_dlacp"]
+[ext_resource type="Script" path="res://prefables/boat.gd" id="1_lbp84"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c3lkf"]
+atlas = ExtResource("1_dlacp")
+region = Rect2(0, 448, 163, 224)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7rdyc"]
+atlas = ExtResource("1_dlacp")
+region = Rect2(163, 448, 163, 224)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eknoc"]
+atlas = ExtResource("1_dlacp")
+region = Rect2(326, 448, 163, 224)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tyn7t"]
+atlas = ExtResource("1_dlacp")
+region = Rect2(489, 448, 163, 224)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_mv37s"]
+animations = [{
+"frames": [{
+"duration": 1.5,
+"texture": SubResource("AtlasTexture_c3lkf")
+}, {
+"duration": 1.5,
+"texture": SubResource("AtlasTexture_7rdyc")
+}, {
+"duration": 1.5,
+"texture": SubResource("AtlasTexture_eknoc")
+}, {
+"duration": 1.5,
+"texture": SubResource("AtlasTexture_tyn7t")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7kuiv"]
+size = Vector2(74, 28)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bjtm8"]
+size = Vector2(78, 54)
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+script = ExtResource("1_lbp84")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(1, 0)
+scale = Vector2(0.677914, 0.5625)
+sprite_frames = SubResource("SpriteFrames_mv37s")
+autoplay = "default"
+frame_progress = 0.854446
+flip_h = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2(8, 12)
+shape = SubResource("RectangleShape2D_7kuiv")
+
+[node name="Area2D" type="Area2D" parent="."]
+visible = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(9, 23)
+shape = SubResource("RectangleShape2D_bjtm8")
+
+[node name="DialogPanel" type="Panel" parent="."]
+visible = false
+z_index = 1
+offset_left = -99.0
+offset_top = 55.0
+offset_right = 102.0
+offset_bottom = 107.0
+
+[node name="Label" type="Label" parent="DialogPanel"]
+layout_mode = 0
+offset_right = 200.0
+offset_bottom = 23.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="DialogPanel"]
+layout_mode = 0
+offset_left = 160.0
+offset_top = 32.0
+offset_right = 241.0
+offset_bottom = 72.0
+scale = Vector2(0.5, 0.5)
+
+[node name="sim" type="Button" parent="DialogPanel/HBoxContainer"]
+layout_mode = 2
+text = "Sim"
+
+[node name="nao" type="Button" parent="DialogPanel/HBoxContainer"]
+layout_mode = 2
+text = "Não"
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_Area2D_body_exited"]
+[connection signal="pressed" from="DialogPanel/HBoxContainer/sim" to="." method="_on_sim_pressed"]
+[connection signal="pressed" from="DialogPanel/HBoxContainer/nao" to="." method="_on_nao_pressed"]

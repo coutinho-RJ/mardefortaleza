@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://bbi3pcigiw60f"]
+
+[ext_resource type="Texture2D" uid="uid://b6erm6hddwy4q" path="res://sprites/2D Pixel Dungeon Asset Pack v2.0/2D Pixel Dungeon Asset Pack/items and trap_animation/keys/keys_1_3.png" id="1_7g1yb"]
+[ext_resource type="Script" path="res://prefables/key.gd" id="1_lcxsg"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_xjivg"]
+height = 22.0
+
+[node name="key" type="Area2D"]
+position = Vector2(-7, -7)
+collision_layer = 8
+script = ExtResource("1_lcxsg")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(5, 6.5)
+scale = Vector2(1.625, 1.8125)
+texture = ExtResource("1_7g1yb")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(7, 7)
+shape = SubResource("CapsuleShape2D_xjivg")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

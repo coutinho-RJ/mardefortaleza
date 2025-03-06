@@ -1,0 +1,79 @@
+[gd_scene load_steps=7 format=3 uid="uid://be63g5jlcx5xb"]
+
+[ext_resource type="Script" path="res://NPC.gd" id="1_kb2q7"]
+[ext_resource type="Texture2D" uid="uid://dnkfffbiv8kah" path="res://sprites/NPC/Generic Male NPCs A.png" id="2_4m1u4"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vls4f"]
+atlas = ExtResource("2_4m1u4")
+region = Rect2(560, 480, 80, 120)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ssdmj"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vls4f")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_t85ge"]
+height = 38.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_y440b"]
+size = Vector2(31, 55)
+
+[node name="NPC" type="CharacterBody2D"]
+script = ExtResource("1_kb2q7")
+
+[node name="texture" type="AnimatedSprite2D" parent="."]
+position = Vector2(-0.999998, -6.125)
+scale = Vector2(0.55, 0.464583)
+sprite_frames = SubResource("SpriteFrames_ssdmj")
+
+[node name="collision" type="CollisionShape2D" parent="."]
+position = Vector2(0, -5)
+shape = SubResource("CapsuleShape2D_t85ge")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="dialogcolision" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0.5, -3.5)
+shape = SubResource("RectangleShape2D_y440b")
+
+[node name="DialogPanel" type="Panel" parent="."]
+visible = false
+z_index = 1
+offset_left = -83.0
+offset_top = 29.0
+offset_right = 86.0
+offset_bottom = 68.0
+
+[node name="Label" type="Label" parent="DialogPanel"]
+layout_mode = 0
+offset_right = 169.0
+offset_bottom = 27.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="DialogPanel"]
+layout_mode = 0
+offset_left = 137.0
+offset_top = 27.0
+offset_right = 199.0
+offset_bottom = 51.0
+scale = Vector2(0.5, 0.5)
+
+[node name="sim" type="Button" parent="DialogPanel/HBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 11
+text = "Sim"
+
+[node name="nao" type="Button" parent="DialogPanel/HBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 11
+text = "Não"
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_Area2D_body_exited"]
+[connection signal="pressed" from="DialogPanel/HBoxContainer/sim" to="." method="_on_sim_pressed"]
+[connection signal="pressed" from="DialogPanel/HBoxContainer/nao" to="." method="_on_nao_pressed"]
