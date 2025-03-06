@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://bt0jbldushf7v"
-path="res://.godot/imported/tower-complete-large.glb-0c488cb45873673fd115d648a43dd185.scn"
+path="res://.godot/imported/tower-complete-large.glb-f8ca8f1643acee1d8d2edfdf3b0e01af.scn"
 
 [deps]
 
-source_file="res://GLB Piratas/tower-complete-large.glb"
-dest_files=["res://.godot/imported/tower-complete-large.glb-0c488cb45873673fd115d648a43dd185.scn"]
+source_file="res://3D/GLB Piratas/tower-complete-large.glb"
+dest_files=["res://.godot/imported/tower-complete-large.glb-f8ca8f1643acee1d8d2edfdf3b0e01af.scn"]
 
 [params]
 

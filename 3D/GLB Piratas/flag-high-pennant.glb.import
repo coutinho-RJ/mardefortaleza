@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://bpcl2xruw2wi5"
-path="res://.godot/imported/flag-high-pennant.glb-002241940f147f159f7fb89613f6816a.scn"
+path="res://.godot/imported/flag-high-pennant.glb-738a8a33dc5a001d411c08afd1b30da3.scn"
 
 [deps]
 
-source_file="res://GLB Piratas/flag-high-pennant.glb"
-dest_files=["res://.godot/imported/flag-high-pennant.glb-002241940f147f159f7fb89613f6816a.scn"]
+source_file="res://3D/GLB Piratas/flag-high-pennant.glb"
+dest_files=["res://.godot/imported/flag-high-pennant.glb-738a8a33dc5a001d411c08afd1b30da3.scn"]
 
 [params]
 

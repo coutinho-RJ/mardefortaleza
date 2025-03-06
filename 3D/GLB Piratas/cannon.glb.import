@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://njvj2hiqtgbd"
-path="res://.godot/imported/cannon.glb-f6c1975a82a8d179d6388e48833483cb.scn"
+path="res://.godot/imported/cannon.glb-11c56596c7e2db57c340e807d2ad15f8.scn"
 
 [deps]
 
-source_file="res://GLB Piratas/cannon.glb"
-dest_files=["res://.godot/imported/cannon.glb-f6c1975a82a8d179d6388e48833483cb.scn"]
+source_file="res://3D/GLB Piratas/cannon.glb"
+dest_files=["res://.godot/imported/cannon.glb-11c56596c7e2db57c340e807d2ad15f8.scn"]
 
 [params]
 

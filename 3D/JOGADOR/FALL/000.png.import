@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c6amkmus5p4c0"
-path="res://.godot/imported/000.png-8fecbd05c17168fd2a7640162acb3168.ctex"
+path="res://.godot/imported/000.png-5baa175200c7e038d41f16f26c05bf3d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://JOGADOR/FALL/000.png"
-dest_files=["res://.godot/imported/000.png-8fecbd05c17168fd2a7640162acb3168.ctex"]
+source_file="res://3D/JOGADOR/FALL/000.png"
+dest_files=["res://.godot/imported/000.png-5baa175200c7e038d41f16f26c05bf3d.ctex"]
 
 [params]
 

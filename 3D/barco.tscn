@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=4 uid="uid://bkaf3cyayyt5s"]
 
-[ext_resource type="Script" path="res://vehicle_body_3d.gd" id="1_bhyn2"]
+[ext_resource type="Script" path="res://3D/vehicle_body_3d.gd" id="1_p6qh2"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ddgry"]
 resource_name = "02___Default"
@@ -107,7 +107,7 @@ size = Vector3(4.14127, 3.57335, 8.59478)
 [node name="Barco" type="VehicleBody3D" node_paths=PackedStringArray("front_left_wheel", "front_right_wheel", "rear_left_wheel", "rear_right_wheel")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.4888, 0)
 mass = 1500.0
-script = ExtResource("1_bhyn2")
+script = ExtResource("1_p6qh2")
 front_left_wheel = NodePath("wheel_left2")
 front_right_wheel = NodePath("wheel_right2")
 rear_left_wheel = NodePath("wheel_left")

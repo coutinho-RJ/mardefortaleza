@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://bdwf8554584al"
-path="res://.godot/imported/structure-fence-sides.glb-b7035fd53cb3b82a1141774b1134985e.scn"
+path="res://.godot/imported/structure-fence-sides.glb-3deb8f7a83b9222a4b5647458e679b24.scn"
 
 [deps]
 
-source_file="res://GLB Piratas/structure-fence-sides.glb"
-dest_files=["res://.godot/imported/structure-fence-sides.glb-b7035fd53cb3b82a1141774b1134985e.scn"]
+source_file="res://3D/GLB Piratas/structure-fence-sides.glb"
+dest_files=["res://.godot/imported/structure-fence-sides.glb-3deb8f7a83b9222a4b5647458e679b24.scn"]
 
 [params]
 

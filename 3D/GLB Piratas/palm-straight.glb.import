@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://rtqqc86078s0"
-path="res://.godot/imported/palm-straight.glb-902a27b68b37ecd5f69e0ddc44096ed8.scn"
+path="res://.godot/imported/palm-straight.glb-2270fdfe4795735dfbb4c8ac623ebebc.scn"
 
 [deps]
 
-source_file="res://GLB Piratas/palm-straight.glb"
-dest_files=["res://.godot/imported/palm-straight.glb-902a27b68b37ecd5f69e0ddc44096ed8.scn"]
+source_file="res://3D/GLB Piratas/palm-straight.glb"
+dest_files=["res://.godot/imported/palm-straight.glb-2270fdfe4795735dfbb4c8ac623ebebc.scn"]
 
 [params]
 

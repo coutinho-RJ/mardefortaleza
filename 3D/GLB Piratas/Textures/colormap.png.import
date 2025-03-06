@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://be5mh3x7cx1rt"
-path.s3tc="res://.godot/imported/colormap.png-884aa6bc7bf320e5c00ee01ff01d626b.s3tc.ctex"
+path.s3tc="res://.godot/imported/colormap.png-b4ed08b1f0f31243defac37c1c5cdd03.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://GLB Piratas/Textures/colormap.png"
-dest_files=["res://.godot/imported/colormap.png-884aa6bc7bf320e5c00ee01ff01d626b.s3tc.ctex"]
+source_file="res://3D/GLB Piratas/Textures/colormap.png"
+dest_files=["res://.godot/imported/colormap.png-b4ed08b1f0f31243defac37c1c5cdd03.s3tc.ctex"]
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bwc5sbqkpey1n"
-path="res://.godot/imported/Janela.png-607ec398f01687aa3a59e7d6a0b95fe2.ctex"
+path="res://.godot/imported/Janela.png-c402de7c814f238c99472d7f428cf814.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://CENÁRIO/Janela.png"
-dest_files=["res://.godot/imported/Janela.png-607ec398f01687aa3a59e7d6a0b95fe2.ctex"]
+source_file="res://3D/CENÁRIO/Janela.png"
+dest_files=["res://.godot/imported/Janela.png-c402de7c814f238c99472d7f428cf814.ctex"]
 
 [params]
 

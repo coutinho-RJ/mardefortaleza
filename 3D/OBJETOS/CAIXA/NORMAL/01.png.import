@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://djmc7ikkwtisp"
-path="res://.godot/imported/01.png-42249e82adb4eb5814cae4770afb6fa8.ctex"
+path="res://.godot/imported/01.png-87dab8605ec5a230d0edf50f61f5ed5f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://OBJETOS/CAIXA/NORMAL/01.png"
-dest_files=["res://.godot/imported/01.png-42249e82adb4eb5814cae4770afb6fa8.ctex"]
+source_file="res://3D/OBJETOS/CAIXA/NORMAL/01.png"
+dest_files=["res://.godot/imported/01.png-87dab8605ec5a230d0edf50f61f5ed5f.ctex"]
 
 [params]
 

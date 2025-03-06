@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://cqj53j60sgski"
-path="res://.godot/imported/bottle-large.glb-618ec6edac074362de1b1d2a70965091.scn"
+path="res://.godot/imported/bottle-large.glb-4204c6cbe7a4818ae691a3f9cf24d6e4.scn"
 
 [deps]
 
-source_file="res://GLB Piratas/bottle-large.glb"
-dest_files=["res://.godot/imported/bottle-large.glb-618ec6edac074362de1b1d2a70965091.scn"]
+source_file="res://3D/GLB Piratas/bottle-large.glb"
+dest_files=["res://.godot/imported/bottle-large.glb-4204c6cbe7a4818ae691a3f9cf24d6e4.scn"]
 
 [params]
 

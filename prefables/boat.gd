@@ -30,7 +30,7 @@ func _on_sim_pressed():
 	button_no.visible = false
 	
 	await get_tree().create_timer(2).timeout
-	get_tree().change_scene_to_file("res://aaaaaaaaaaa/mar_de_fortaleza.tscn")
+	get_tree().change_scene_to_file("res://3D/mar_de_fortaleza.tscn")
 	
 func _on_nao_pressed():
 	button_yes.visible = false

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://br312kgsxuupm"
-path="res://.godot/imported/009.png-1479bccc40ce150d903deac33068fe34.ctex"
+path="res://.godot/imported/009.png-325cc6a48307e06a2c0cd84c21e22593.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://INIMIGOS/PORCO ATIRADOR/IDLE/009.png"
-dest_files=["res://.godot/imported/009.png-1479bccc40ce150d903deac33068fe34.ctex"]
+source_file="res://3D/INIMIGOS/PORCO ATIRADOR/IDLE/009.png"
+dest_files=["res://.godot/imported/009.png-325cc6a48307e06a2c0cd84c21e22593.ctex"]
 
 [params]
 

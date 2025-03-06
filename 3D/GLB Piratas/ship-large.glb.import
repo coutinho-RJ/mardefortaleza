@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://dc5kf1r2qstt4"
-path="res://.godot/imported/ship-large.glb-3f2030fe38c122aa1e436f74f6baba65.scn"
+path="res://.godot/imported/ship-large.glb-69e0c0a64541b77f929a460d9d6e4ab0.scn"
 
 [deps]
 
-source_file="res://GLB Piratas/ship-large.glb"
-dest_files=["res://.godot/imported/ship-large.glb-3f2030fe38c122aa1e436f74f6baba65.scn"]
+source_file="res://3D/GLB Piratas/ship-large.glb"
+dest_files=["res://.godot/imported/ship-large.glb-69e0c0a64541b77f929a460d9d6e4ab0.scn"]
 
 [params]
 

@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://c5hbl15d36412"
-path="res://.godot/imported/rocks-b.glb-9ab114eec05072e4dd72014c4f96c7d5.scn"
+path="res://.godot/imported/rocks-b.glb-c53d6d7eacdc840f4c83a4e1a3451d40.scn"
 
 [deps]
 
-source_file="res://GLB Piratas/rocks-b.glb"
-dest_files=["res://.godot/imported/rocks-b.glb-9ab114eec05072e4dd72014c4f96c7d5.scn"]
+source_file="res://3D/GLB Piratas/rocks-b.glb"
+dest_files=["res://.godot/imported/rocks-b.glb-c53d6d7eacdc840f4c83a4e1a3451d40.scn"]
 
 [params]
 

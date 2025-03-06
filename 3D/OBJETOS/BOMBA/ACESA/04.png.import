@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://pe5dy66t4w20"
-path="res://.godot/imported/04.png-ff5d1a404d885a41f3cedaf94a7d47c0.ctex"
+path="res://.godot/imported/04.png-953d3a71150a2c23766ff561878a67a8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://OBJETOS/BOMBA/ACESA/04.png"
-dest_files=["res://.godot/imported/04.png-ff5d1a404d885a41f3cedaf94a7d47c0.ctex"]
+source_file="res://3D/OBJETOS/BOMBA/ACESA/04.png"
+dest_files=["res://.godot/imported/04.png-953d3a71150a2c23766ff561878a67a8.ctex"]
 
 [params]
 

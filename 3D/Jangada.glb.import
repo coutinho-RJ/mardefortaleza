@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://dm6qb1h6xnokx"
-path="res://.godot/imported/Jangada.glb-361414056fd130a65bb331debbc025d3.scn"
+path="res://.godot/imported/Jangada.glb-5704fe284326ee1bf357b300268668cd.scn"
 
 [deps]
 
-source_file="res://Jangada.glb"
-dest_files=["res://.godot/imported/Jangada.glb-361414056fd130a65bb331debbc025d3.scn"]
+source_file="res://3D/Jangada.glb"
+dest_files=["res://.godot/imported/Jangada.glb-5704fe284326ee1bf357b300268668cd.scn"]
 
 [params]
 

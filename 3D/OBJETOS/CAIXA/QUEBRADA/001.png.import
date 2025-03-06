@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cm1cv65te67jc"
-path="res://.godot/imported/001.png-01504b2bdad65d1542e3de105aa28ead.ctex"
+path="res://.godot/imported/001.png-e59f79dedd279346877764cd90712636.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://OBJETOS/CAIXA/QUEBRADA/001.png"
-dest_files=["res://.godot/imported/001.png-01504b2bdad65d1542e3de105aa28ead.ctex"]
+source_file="res://3D/OBJETOS/CAIXA/QUEBRADA/001.png"
+dest_files=["res://.godot/imported/001.png-e59f79dedd279346877764cd90712636.ctex"]
 
 [params]
 

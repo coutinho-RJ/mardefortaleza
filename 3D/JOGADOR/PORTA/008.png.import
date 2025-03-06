@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://clif4y20jglg5"
-path="res://.godot/imported/008.png-eb15ef5e887ffe25fce8d8f4ba8079eb.ctex"
+path="res://.godot/imported/008.png-a5dcc10717a4017aaac4297844829753.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://JOGADOR/PORTA/008.png"
-dest_files=["res://.godot/imported/008.png-eb15ef5e887ffe25fce8d8f4ba8079eb.ctex"]
+source_file="res://3D/JOGADOR/PORTA/008.png"
+dest_files=["res://.godot/imported/008.png-a5dcc10717a4017aaac4297844829753.ctex"]
 
 [params]
 

@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://do5ygwsl3u3j1"
-path="res://.godot/imported/hole.glb-538137377edd37cc9782605a3c7e161b.scn"
+path="res://.godot/imported/hole.glb-4c4ff5e6dd5de4bad4a8a45fa65eec0e.scn"
 
 [deps]
 
-source_file="res://GLB Piratas/hole.glb"
-dest_files=["res://.godot/imported/hole.glb-538137377edd37cc9782605a3c7e161b.scn"]
+source_file="res://3D/GLB Piratas/hole.glb"
+dest_files=["res://.godot/imported/hole.glb-4c4ff5e6dd5de4bad4a8a45fa65eec0e.scn"]
 
 [params]
 

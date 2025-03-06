@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://clgsmhhek8g03"
-path="res://.godot/imported/002.png-25e16033e477b7ef3242c72e42e440eb.ctex"
+path="res://.godot/imported/002.png-5e004f5e1f9c9b0817cc285bf836127f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://INIMIGOS/PORCO PATRULHEIRO/DIE/002.png"
-dest_files=["res://.godot/imported/002.png-25e16033e477b7ef3242c72e42e440eb.ctex"]
+source_file="res://3D/INIMIGOS/PORCO PATRULHEIRO/DIE/002.png"
+dest_files=["res://.godot/imported/002.png-5e004f5e1f9c9b0817cc285bf836127f.ctex"]
 
 [params]
 

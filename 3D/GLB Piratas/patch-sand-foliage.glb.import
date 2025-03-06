@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://buhansd772jtw"
-path="res://.godot/imported/patch-sand-foliage.glb-178272ec21dde0f903fe43898ec267d7.scn"
+path="res://.godot/imported/patch-sand-foliage.glb-46516b73848f03ddb22004b169188974.scn"
 
 [deps]
 
-source_file="res://GLB Piratas/patch-sand-foliage.glb"
-dest_files=["res://.godot/imported/patch-sand-foliage.glb-178272ec21dde0f903fe43898ec267d7.scn"]
+source_file="res://3D/GLB Piratas/patch-sand-foliage.glb"
+dest_files=["res://.godot/imported/patch-sand-foliage.glb-46516b73848f03ddb22004b169188974.scn"]
 
 [params]
 

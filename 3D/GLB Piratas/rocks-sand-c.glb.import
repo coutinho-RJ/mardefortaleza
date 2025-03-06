@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://do4kinrk87rid"
-path="res://.godot/imported/rocks-sand-c.glb-71bc1485d310a1ccbefebde86ebef674.scn"
+path="res://.godot/imported/rocks-sand-c.glb-e19d961d4f7f26d87f1e162ba197fb36.scn"
 
 [deps]
 
-source_file="res://GLB Piratas/rocks-sand-c.glb"
-dest_files=["res://.godot/imported/rocks-sand-c.glb-71bc1485d310a1ccbefebde86ebef674.scn"]
+source_file="res://3D/GLB Piratas/rocks-sand-c.glb"
+dest_files=["res://.godot/imported/rocks-sand-c.glb-e19d961d4f7f26d87f1e162ba197fb36.scn"]
 
 [params]
 

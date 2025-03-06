@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cbjyhcg2sesoj"
-path="res://.godot/imported/001.png-fe8afb49ef1c33bf95b88ab78e692760.ctex"
+path="res://.godot/imported/001.png-a43633a31d295ef7a0370e95c67af32a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://INIMIGOS/CHEFÃO/ATACK/001.png"
-dest_files=["res://.godot/imported/001.png-fe8afb49ef1c33bf95b88ab78e692760.ctex"]
+source_file="res://3D/INIMIGOS/CHEFÃO/ATACK/001.png"
+dest_files=["res://.godot/imported/001.png-a43633a31d295ef7a0370e95c67af32a.ctex"]
 
 [params]
 

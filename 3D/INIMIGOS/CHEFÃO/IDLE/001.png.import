@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cggj6xhmcugan"
-path="res://.godot/imported/001.png-4f5381e21f279f3e08992ed0ffb8bf6e.ctex"
+path="res://.godot/imported/001.png-df52fcc20eab2215ff2d3a459af5b39d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://INIMIGOS/CHEFÃO/IDLE/001.png"
-dest_files=["res://.godot/imported/001.png-4f5381e21f279f3e08992ed0ffb8bf6e.ctex"]
+source_file="res://3D/INIMIGOS/CHEFÃO/IDLE/001.png"
+dest_files=["res://.godot/imported/001.png-df52fcc20eab2215ff2d3a459af5b39d.ctex"]
 
 [params]
 

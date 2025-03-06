@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://db4j8tvk4b6if"
-path="res://.godot/imported/tower-roof.glb-46b0aa0d814009df2150522584c7e43c.scn"
+path="res://.godot/imported/tower-roof.glb-a61a5d625508ea6500cfb02b66e34c6b.scn"
 
 [deps]
 
-source_file="res://GLB Piratas/tower-roof.glb"
-dest_files=["res://.godot/imported/tower-roof.glb-46b0aa0d814009df2150522584c7e43c.scn"]
+source_file="res://3D/GLB Piratas/tower-roof.glb"
+dest_files=["res://.godot/imported/tower-roof.glb-a61a5d625508ea6500cfb02b66e34c6b.scn"]
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://qsjsoel376vo"
-path="res://.godot/imported/Chave_01.png-c0cbc07327bbf1ad894bcd38c146fce7.ctex"
+path="res://.godot/imported/Chave_01.png-394561e331c0b466de8e4b983457e669.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://HUD/ITENS/Chave_01.png"
-dest_files=["res://.godot/imported/Chave_01.png-c0cbc07327bbf1ad894bcd38c146fce7.ctex"]
+source_file="res://3D/HUD/ITENS/Chave_01.png"
+dest_files=["res://.godot/imported/Chave_01.png-394561e331c0b466de8e4b983457e669.ctex"]
 
 [params]
 

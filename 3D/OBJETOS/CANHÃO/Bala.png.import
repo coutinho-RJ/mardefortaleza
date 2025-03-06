@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c53i1n7t67642"
-path="res://.godot/imported/Bala.png-e6c55a44192df0ec7cf9e9578e765183.ctex"
+path="res://.godot/imported/Bala.png-5ae03c381387e84bad516fea5e3ba61c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://OBJETOS/CANHÃO/Bala.png"
-dest_files=["res://.godot/imported/Bala.png-e6c55a44192df0ec7cf9e9578e765183.ctex"]
+source_file="res://3D/OBJETOS/CANHÃO/Bala.png"
+dest_files=["res://.godot/imported/Bala.png-5ae03c381387e84bad516fea5e3ba61c.ctex"]
 
 [params]
 

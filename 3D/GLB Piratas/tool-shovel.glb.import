@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://udvkpfulefm7"
-path="res://.godot/imported/tool-shovel.glb-785dc8acb84f804808857b10e11d5733.scn"
+path="res://.godot/imported/tool-shovel.glb-e15fc0054d5228fdbcc4234ba9bfd213.scn"
 
 [deps]
 
-source_file="res://GLB Piratas/tool-shovel.glb"
-dest_files=["res://.godot/imported/tool-shovel.glb-785dc8acb84f804808857b10e11d5733.scn"]
+source_file="res://3D/GLB Piratas/tool-shovel.glb"
+dest_files=["res://.godot/imported/tool-shovel.glb-e15fc0054d5228fdbcc4234ba9bfd213.scn"]
 
 [params]
 

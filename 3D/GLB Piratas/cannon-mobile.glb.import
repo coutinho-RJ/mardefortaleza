@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://cji0y1c8td5s"
-path="res://.godot/imported/cannon-mobile.glb-5c0781a540cb8785fe0f3ab99951672e.scn"
+path="res://.godot/imported/cannon-mobile.glb-5fda4144024b2db2a28aeb1cff1ac445.scn"
 
 [deps]
 
-source_file="res://GLB Piratas/cannon-mobile.glb"
-dest_files=["res://.godot/imported/cannon-mobile.glb-5c0781a540cb8785fe0f3ab99951672e.scn"]
+source_file="res://3D/GLB Piratas/cannon-mobile.glb"
+dest_files=["res://.godot/imported/cannon-mobile.glb-5fda4144024b2db2a28aeb1cff1ac445.scn"]
 
 [params]
 

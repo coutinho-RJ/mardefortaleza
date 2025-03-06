@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://cjd6taoen5bae"
-path="res://.godot/imported/flag.glb-88113e95b0214a011e47a4850acf1334.scn"
+path="res://.godot/imported/flag.glb-9ae2ac5fe9643643911e10b97f822d41.scn"
 
 [deps]
 
-source_file="res://GLB Piratas/flag.glb"
-dest_files=["res://.godot/imported/flag.glb-88113e95b0214a011e47a4850acf1334.scn"]
+source_file="res://3D/GLB Piratas/flag.glb"
+dest_files=["res://.godot/imported/flag.glb-9ae2ac5fe9643643911e10b97f822d41.scn"]
 
 [params]
 

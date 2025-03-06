@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://cm41rmubqk3x2"
-path="res://.godot/imported/structure-platform.glb-6f7d18091c226cd8a2d8f6b28314b970.scn"
+path="res://.godot/imported/structure-platform.glb-859b8c46fc5a021269eccd8ee61dc9ae.scn"
 
 [deps]
 
-source_file="res://GLB Piratas/structure-platform.glb"
-dest_files=["res://.godot/imported/structure-platform.glb-6f7d18091c226cd8a2d8f6b28314b970.scn"]
+source_file="res://3D/GLB Piratas/structure-platform.glb"
+dest_files=["res://.godot/imported/structure-platform.glb-859b8c46fc5a021269eccd8ee61dc9ae.scn"]
 
 [params]
 

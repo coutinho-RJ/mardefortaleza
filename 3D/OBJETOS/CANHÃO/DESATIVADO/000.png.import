@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dhfamg6gdmvti"
-path="res://.godot/imported/000.png-504378d91f527ae3eb71abffd6eb7f85.ctex"
+path="res://.godot/imported/000.png-c53de70a64ff7ea57652492cc4fdbcb2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://OBJETOS/CANHÃO/DESATIVADO/000.png"
-dest_files=["res://.godot/imported/000.png-504378d91f527ae3eb71abffd6eb7f85.ctex"]
+source_file="res://3D/OBJETOS/CANHÃO/DESATIVADO/000.png"
+dest_files=["res://.godot/imported/000.png-c53de70a64ff7ea57652492cc4fdbcb2.ctex"]
 
 [params]
 

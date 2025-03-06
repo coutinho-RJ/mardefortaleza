@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cf71dyllnjd5y"
-path="res://.godot/imported/004.png-22feef4a9ca39b293935d7e18114aafb.ctex"
+path="res://.godot/imported/004.png-d66bd4f53aa7b7b6541b21706ddb71b1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://OBJETOS/CANHÃO/ATIRANDO/004.png"
-dest_files=["res://.godot/imported/004.png-22feef4a9ca39b293935d7e18114aafb.ctex"]
+source_file="res://3D/OBJETOS/CANHÃO/ATIRANDO/004.png"
+dest_files=["res://.godot/imported/004.png-d66bd4f53aa7b7b6541b21706ddb71b1.ctex"]
 
 [params]
 

@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://d3sapxfx3eag1"
-path="res://.godot/imported/tower-watch.glb-2036394004df7cf6fd8c4d4688f01d7f.scn"
+path="res://.godot/imported/tower-watch.glb-7f07426e12c32ee079f497c029baf48a.scn"
 
 [deps]
 
-source_file="res://GLB Piratas/tower-watch.glb"
-dest_files=["res://.godot/imported/tower-watch.glb-2036394004df7cf6fd8c4d4688f01d7f.scn"]
+source_file="res://3D/GLB Piratas/tower-watch.glb"
+dest_files=["res://.godot/imported/tower-watch.glb-7f07426e12c32ee079f497c029baf48a.scn"]
 
 [params]
 

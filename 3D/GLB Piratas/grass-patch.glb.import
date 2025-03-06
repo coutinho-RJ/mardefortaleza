@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://yr6xmy2co62l"
-path="res://.godot/imported/grass-patch.glb-11ede6f385104d79d88469f4ca93da55.scn"
+path="res://.godot/imported/grass-patch.glb-51cf03579a2a82a8eb5a46c10265899a.scn"
 
 [deps]
 
-source_file="res://GLB Piratas/grass-patch.glb"
-dest_files=["res://.godot/imported/grass-patch.glb-11ede6f385104d79d88469f4ca93da55.scn"]
+source_file="res://3D/GLB Piratas/grass-patch.glb"
+dest_files=["res://.godot/imported/grass-patch.glb-51cf03579a2a82a8eb5a46c10265899a.scn"]
 
 [params]
 

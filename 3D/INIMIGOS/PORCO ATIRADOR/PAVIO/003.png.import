@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://duxs7skgyreoi"
-path="res://.godot/imported/003.png-1cde13a64b43d31732a12df795c3799b.ctex"
+path="res://.godot/imported/003.png-6206c7c1d4ed1536e16f76ee66e39ed4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://INIMIGOS/PORCO ATIRADOR/PAVIO/003.png"
-dest_files=["res://.godot/imported/003.png-1cde13a64b43d31732a12df795c3799b.ctex"]
+source_file="res://3D/INIMIGOS/PORCO ATIRADOR/PAVIO/003.png"
+dest_files=["res://.godot/imported/003.png-6206c7c1d4ed1536e16f76ee66e39ed4.ctex"]
 
 [params]
 

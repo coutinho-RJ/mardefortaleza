@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://lp7e4lr745e5"
-path.s3tc="res://.godot/imported/Oceano 3.jpg-d867058cf976888f6ac175c6c598e8b1.s3tc.ctex"
+path.s3tc="res://.godot/imported/Oceano 3.jpg-8380972231ae8ea0bd71a209b849b371.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Oceano 3.jpg"
-dest_files=["res://.godot/imported/Oceano 3.jpg-d867058cf976888f6ac175c6c598e8b1.s3tc.ctex"]
+source_file="res://3D/Oceano 3.jpg"
+dest_files=["res://.godot/imported/Oceano 3.jpg-8380972231ae8ea0bd71a209b849b371.s3tc.ctex"]
 
 [params]
 

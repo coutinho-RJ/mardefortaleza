@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bk48h7bprjjho"
-path="res://.godot/imported/Bomba_02.png-2039d79e0641abeac05c1ad1e54355ae.ctex"
+path="res://.godot/imported/Bomba_02.png-13c3ea4f39a89d69f65cac0c2e55f42e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://HUD/ITENS/Bomba_02.png"
-dest_files=["res://.godot/imported/Bomba_02.png-2039d79e0641abeac05c1ad1e54355ae.ctex"]
+source_file="res://3D/HUD/ITENS/Bomba_02.png"
+dest_files=["res://.godot/imported/Bomba_02.png-13c3ea4f39a89d69f65cac0c2e55f42e.ctex"]
 
 [params]
 

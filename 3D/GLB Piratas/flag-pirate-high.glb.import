@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://b3ehv6f2ais3o"
-path="res://.godot/imported/flag-pirate-high.glb-68305a5dbfe102654d6f9babe9223532.scn"
+path="res://.godot/imported/flag-pirate-high.glb-84bbba398dd1e29867c1e89191cdbbd8.scn"
 
 [deps]
 
-source_file="res://GLB Piratas/flag-pirate-high.glb"
-dest_files=["res://.godot/imported/flag-pirate-high.glb-68305a5dbfe102654d6f9babe9223532.scn"]
+source_file="res://3D/GLB Piratas/flag-pirate-high.glb"
+dest_files=["res://.godot/imported/flag-pirate-high.glb-84bbba398dd1e29867c1e89191cdbbd8.scn"]
 
 [params]
 

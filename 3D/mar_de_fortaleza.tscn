@@ -1,27 +1,27 @@
 [gd_scene load_steps=32 format=3 uid="uid://isywsonkg0e8"]
 
-[ext_resource type="Texture2D" uid="uid://bl46u7hb7j1ns" path="res://autumn_field_puresky_4k.hdr" id="1_cciaj"]
-[ext_resource type="Script" path="res://interface.gd" id="1_nvias"]
-[ext_resource type="PackedScene" uid="uid://bkaf3cyayyt5s" path="res://barco.tscn" id="2_7tsr2"]
-[ext_resource type="Texture2D" uid="uid://pxkbx20nxa5o" path="res://HUD/VIDA/SleekBars.png" id="2_nrc7e"]
-[ext_resource type="Texture2D" uid="uid://d1aq7s41uhgyt" path="res://Water/bake01.png" id="3_7vcpa"]
-[ext_resource type="Texture2D" uid="uid://cvv2ljhdy6gig" path="res://Water/bake02.png" id="4_xt27j"]
-[ext_resource type="Texture2D" uid="uid://bns3x8h67sw0g" path="res://Water/bake11.png" id="5_r47ex"]
-[ext_resource type="Texture2D" uid="uid://chk2a1jq1v3sf" path="res://Water/bake12.png" id="6_1i81p"]
-[ext_resource type="Texture2D" uid="uid://drb54cw68xiea" path="res://Water/bake03.png" id="7_iki4j"]
-[ext_resource type="Texture2D" uid="uid://dqch23vq27qj3" path="res://Water/bake04.png" id="8_057tv"]
-[ext_resource type="Texture2D" uid="uid://65nio8vketf2" path="res://Water/bake05.png" id="9_omlab"]
-[ext_resource type="Texture2D" uid="uid://btq7a32lslwbe" path="res://Water/bake06.png" id="10_u6e5c"]
-[ext_resource type="Texture2D" uid="uid://bw5l40ru83lsh" path="res://Water/bake07.png" id="11_1rgik"]
-[ext_resource type="Texture2D" uid="uid://bctwvbrq4gel3" path="res://Water/bake08.png" id="12_ltc35"]
-[ext_resource type="Texture2D" uid="uid://bq6nvpkmvxmme" path="res://Water/bake09.png" id="13_83not"]
-[ext_resource type="Texture2D" uid="uid://coe1dw77vh565" path="res://Water/bake10.png" id="14_u0iva"]
-[ext_resource type="PackedScene" uid="uid://bcpdsqp03a58a" path="res://conjuntopedras_2.tscn" id="18_n3xs4"]
-[ext_resource type="PackedScene" uid="uid://bawptdk2w1ekw" path="res://conjuntopedras1.tscn" id="18_xbvf6"]
-[ext_resource type="PackedScene" uid="uid://c3s8gi5ec2awc" path="res://conjuntopedras_3.tscn" id="19_yqepk"]
-[ext_resource type="PackedScene" uid="uid://c2mf0meji1fh1" path="res://grandenaviopirata.tscn" id="20_2mt1p"]
-[ext_resource type="Script" path="res://navio_inimigo.gd" id="21_262vc"]
-[ext_resource type="PackedScene" uid="uid://lfgrdq35ctbp" path="res://madeira.tscn" id="21_sg7n0"]
+[ext_resource type="Texture2D" uid="uid://bl46u7hb7j1ns" path="res://3D/autumn_field_puresky_4k.hdr" id="1_cciaj"]
+[ext_resource type="Script" path="res://3D/interface.gd" id="1_i1kem"]
+[ext_resource type="PackedScene" uid="uid://bkaf3cyayyt5s" path="res://3D/barco.tscn" id="2_7tsr2"]
+[ext_resource type="Texture2D" uid="uid://pxkbx20nxa5o" path="res://3D/HUD/VIDA/SleekBars.png" id="2_nrc7e"]
+[ext_resource type="Texture2D" uid="uid://d1aq7s41uhgyt" path="res://3D/Water/bake01.png" id="3_7vcpa"]
+[ext_resource type="Texture2D" uid="uid://cvv2ljhdy6gig" path="res://3D/Water/bake02.png" id="4_xt27j"]
+[ext_resource type="Texture2D" uid="uid://bns3x8h67sw0g" path="res://3D/Water/bake11.png" id="5_r47ex"]
+[ext_resource type="Texture2D" uid="uid://chk2a1jq1v3sf" path="res://3D/Water/bake12.png" id="6_1i81p"]
+[ext_resource type="Texture2D" uid="uid://drb54cw68xiea" path="res://3D/Water/bake03.png" id="7_iki4j"]
+[ext_resource type="Texture2D" uid="uid://dqch23vq27qj3" path="res://3D/Water/bake04.png" id="8_057tv"]
+[ext_resource type="Texture2D" uid="uid://65nio8vketf2" path="res://3D/Water/bake05.png" id="9_omlab"]
+[ext_resource type="Texture2D" uid="uid://btq7a32lslwbe" path="res://3D/Water/bake06.png" id="10_u6e5c"]
+[ext_resource type="Texture2D" uid="uid://bw5l40ru83lsh" path="res://3D/Water/bake07.png" id="11_1rgik"]
+[ext_resource type="Texture2D" uid="uid://bctwvbrq4gel3" path="res://3D/Water/bake08.png" id="12_ltc35"]
+[ext_resource type="Texture2D" uid="uid://bq6nvpkmvxmme" path="res://3D/Water/bake09.png" id="13_83not"]
+[ext_resource type="Texture2D" uid="uid://coe1dw77vh565" path="res://3D/Water/bake10.png" id="14_u0iva"]
+[ext_resource type="PackedScene" uid="uid://bcpdsqp03a58a" path="res://3D/conjuntopedras_2.tscn" id="18_n3xs4"]
+[ext_resource type="PackedScene" uid="uid://bawptdk2w1ekw" path="res://3D/conjuntopedras1.tscn" id="18_xbvf6"]
+[ext_resource type="PackedScene" uid="uid://c3s8gi5ec2awc" path="res://3D/conjuntopedras_3.tscn" id="19_yqepk"]
+[ext_resource type="PackedScene" uid="uid://c2mf0meji1fh1" path="res://3D/grandenaviopirata.tscn" id="20_2mt1p"]
+[ext_resource type="PackedScene" uid="uid://lfgrdq35ctbp" path="res://3D/madeira.tscn" id="21_sg7n0"]
+[ext_resource type="Script" path="res://3D/navio_inimigo.gd" id="22_4xay2"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_csuu8"]
 panorama = ExtResource("1_cciaj")
@@ -93,7 +93,7 @@ size = Vector3(4.62299, 9.99347, 11.923)
 transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0, 0, 0)
 
 [node name="Interface" type="CanvasLayer" parent="."]
-script = ExtResource("1_nvias")
+script = ExtResource("1_i1kem")
 
 [node name="barracontainer" type="Sprite2D" parent="Interface"]
 position = Vector2(16687, 8017)
@@ -163,7 +163,7 @@ transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 36.0548, 0, 24.104)
 
 [node name="NavioInimigo" type="CharacterBody3D" parent="NavigationRegion3D" node_paths=PackedStringArray("target")]
 transform = Transform3D(-1.99992, 0.000332741, 0.0177987, -2.49561e-10, 1.99965, -0.0373828, -0.0178018, -0.0373813, -1.99957, -19.0391, -0.1203, 47.1951)
-script = ExtResource("21_262vc")
+script = ExtResource("22_4xay2")
 target = NodePath("../../Barco")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/NavioInimigo"]

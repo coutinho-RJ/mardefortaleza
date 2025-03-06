@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://dox6rfk12hc6h"
-path="res://.godot/imported/crate.glb-26f5e81d86168df088912703eaa60dfe.scn"
+path="res://.godot/imported/crate.glb-2985a2053744ae982ba8bcb7c3cb71c9.scn"
 
 [deps]
 
-source_file="res://GLB Piratas/crate.glb"
-dest_files=["res://.godot/imported/crate.glb-26f5e81d86168df088912703eaa60dfe.scn"]
+source_file="res://3D/GLB Piratas/crate.glb"
+dest_files=["res://.godot/imported/crate.glb-2985a2053744ae982ba8bcb7c3cb71c9.scn"]
 
 [params]
 

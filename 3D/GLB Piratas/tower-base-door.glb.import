@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://bj5e3cb13rb33"
-path="res://.godot/imported/tower-base-door.glb-5a5dfaec437a1bca8565614507a60cae.scn"
+path="res://.godot/imported/tower-base-door.glb-4bbbce55fcc4cfb73859827dbbc22106.scn"
 
 [deps]
 
-source_file="res://GLB Piratas/tower-base-door.glb"
-dest_files=["res://.godot/imported/tower-base-door.glb-5a5dfaec437a1bca8565614507a60cae.scn"]
+source_file="res://3D/GLB Piratas/tower-base-door.glb"
+dest_files=["res://.godot/imported/tower-base-door.glb-4bbbce55fcc4cfb73859827dbbc22106.scn"]
 
 [params]
 

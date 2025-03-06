@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://03tvuu534bon"
-path.s3tc="res://.godot/imported/bake37.png-f3b5e3a704feb43c2b1f254cd1c376a3.s3tc.ctex"
+path.s3tc="res://.godot/imported/bake37.png-98d52bd9f340480b940c7dc951968f3b.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Water/bake37.png"
-dest_files=["res://.godot/imported/bake37.png-f3b5e3a704feb43c2b1f254cd1c376a3.s3tc.ctex"]
+source_file="res://3D/Water/bake37.png"
+dest_files=["res://.godot/imported/bake37.png-98d52bd9f340480b940c7dc951968f3b.s3tc.ctex"]
 
 [params]
 

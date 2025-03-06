@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dxeb3wlpl8vu8"
-path="res://.godot/imported/05.png-2ecd1165376db8bc1a6a6e131010c634.ctex"
+path="res://.godot/imported/05.png-357cc3fb6dd6bbed1823c881728bf986.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://OBJETOS/BOMBA/EXPLODINDO/05.png"
-dest_files=["res://.godot/imported/05.png-2ecd1165376db8bc1a6a6e131010c634.ctex"]
+source_file="res://3D/OBJETOS/BOMBA/EXPLODINDO/05.png"
+dest_files=["res://.godot/imported/05.png-357cc3fb6dd6bbed1823c881728bf986.ctex"]
 
 [params]
 
