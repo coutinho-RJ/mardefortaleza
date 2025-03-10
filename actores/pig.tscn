@@ -1,0 +1,97 @@
+[gd_scene load_steps=8 format=3 uid="uid://cxbe6wxobdms5"]
+
+[ext_resource type="Script" path="res://actores/pig.gd" id="1_nsyc5"]
+[ext_resource type="Texture2D" uid="uid://b5bsy657tovxp" path="res://sprites/Cute_Fantasy_Free/Cute_Fantasy_Free/Animals/Pig/Pig.png" id="2_2sum6"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_7rf3c"]
+radius = 2.0
+height = 16.0
+
+[sub_resource type="Animation" id="Animation_wjg5t"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_26skg"]
+resource_name = "idle"
+length = 0.2
+loop_mode = 1
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [0, 1]
+}
+
+[sub_resource type="Animation" id="Animation_bgjgl"]
+resource_name = "walk"
+length = 0.2
+loop_mode = 1
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [2, 3]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_lttgd"]
+_data = {
+"RESET": SubResource("Animation_wjg5t"),
+"idle": SubResource("Animation_26skg"),
+"walk": SubResource("Animation_bgjgl")
+}
+
+[node name="Pig" type="CharacterBody2D" node_paths=PackedStringArray("_sprite", "_animation", "_walk_timer")]
+motion_mode = 1
+platform_on_leave = 2
+script = ExtResource("1_nsyc5")
+_sprite = NodePath("AnimatedSprite2D")
+_animation = NodePath("AnimationPlayer")
+_walk_timer = NodePath("WalkTimer")
+
+[node name="AnimatedSprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -6)
+texture = ExtResource("2_2sum6")
+hframes = 2
+vframes = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+show_behind_parent = true
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_7rf3c")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_lttgd")
+}
+autoplay = "idle"
+speed_scale = 0.25
+
+[node name="WalkTimer" type="Timer" parent="."]
+one_shot = true
+
+[connection signal="timeout" from="WalkTimer" to="." method="_on_walk_timer_timeout"]

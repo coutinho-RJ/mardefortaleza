@@ -11,20 +11,21 @@ script = ExtResource("1_57kj8")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 0
-offset_right = 742.0
-offset_bottom = 382.0
+offset_right = 1153.0
+offset_bottom = 639.0
 texture = ExtResource("2_ms7y0")
 
 [node name="Panel" type="Panel" parent="."]
 layout_mode = 0
-offset_top = 233.0
-offset_right = 740.0
-offset_bottom = 383.0
+offset_top = 489.0
+offset_right = 1154.0
+offset_bottom = 639.0
 
 [node name="Label" type="Label" parent="Panel"]
 layout_mode = 0
-offset_right = 744.0
-offset_bottom = 152.0
+offset_top = 1.0
+offset_right = 1154.0
+offset_bottom = 150.0
 
 [node name="texttimer" type="Timer" parent="."]
 wait_time = 0.1

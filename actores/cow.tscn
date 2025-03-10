@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://du55p6yf3vlyw"]
+
+[ext_resource type="PackedScene" uid="uid://cxbe6wxobdms5" path="res://actores/pig.tscn" id="1_j0yxb"]
+[ext_resource type="Texture2D" uid="uid://b2blfh7q6ru11" path="res://sprites/Cute_Fantasy_Free/Cute_Fantasy_Free/Animals/Cow/Cow.png" id="2_fmq4f"]
+
+[node name="Cow" instance=ExtResource("1_j0yxb")]
+
+[node name="AnimatedSprite2D" parent="." index="0"]
+position = Vector2(0, -9)
+texture = ExtResource("2_fmq4f")
+
+[node name="CollisionShape2D" parent="." index="1"]
+position = Vector2(1, 0)

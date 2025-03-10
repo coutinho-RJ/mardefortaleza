@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=4 uid="uid://vxicll3yldk8"]
+[gd_scene load_steps=22 format=4 uid="uid://vxicll3yldk8"]
 
 [ext_resource type="Texture2D" uid="uid://doq6x5oog6gel" path="res://sprites/Cute_Fantasy_Free/Cute_Fantasy_Free/Tiles/Beach_Tile.png" id="1_yjl2t"]
 [ext_resource type="Texture2D" uid="uid://ps3ag2frebfx" path="res://sprites/Cute_Fantasy_Free/Cute_Fantasy_Free/Tiles/Water_Tile.png" id="2_c5ro0"]
@@ -187,12 +187,6 @@ sources/0 = SubResource("TileSetAtlasSource_ierx0")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wqbbr"]
 size = Vector2(5, 45)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_ekly6"]
-size = Vector2(5, 45)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_33304"]
-size = Vector2(5, 44)
-
 [node name="Level_1" type="Node2D"]
 
 [node name="terrain" type="TileMapLayer" parent="."]
@@ -217,26 +211,19 @@ tile_set = SubResource("TileSet_54l5b")
 position = Vector2(730, 88)
 
 [node name="NPC" parent="." instance=ExtResource("9_52jre")]
-z_index = 1
 position = Vector2(677, 67)
 
 [node name="transition_area" type="Area2D" parent="."]
 script = ExtResource("10_vl3vc")
-cena_destino = "res://level_1.tscn"
+cena_destino = "res://Terrain/terrain_teste_1.tscn"
 
 [node name="transition_colision_1" type="CollisionShape2D" parent="transition_area"]
 position = Vector2(3, 80)
 rotation = 3.14159
 shape = SubResource("RectangleShape2D_wqbbr")
 
-[node name="transition_colision_2" type="CollisionShape2D" parent="transition_area"]
-position = Vector2(1149, 399)
-shape = SubResource("RectangleShape2D_ekly6")
-
-[node name="transition_)colision_3" type="CollisionShape2D" parent="transition_area"]
-position = Vector2(1149.5, 608)
-shape = SubResource("RectangleShape2D_33304")
-
 [node name="player" parent="." instance=ExtResource("4_a5pni")]
 z_index = 1
-position = Vector2(-191, -72)
+position = Vector2(-181, -72)
+
+[connection signal="body_entered" from="transition_area" to="transition_area" method="_on_body_entered"]

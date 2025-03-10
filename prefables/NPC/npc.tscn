@@ -19,12 +19,14 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_t85ge"]
-height = 38.0
+radius = 5.0
+height = 24.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_y440b"]
 size = Vector2(31, 55)
 
 [node name="NPC" type="CharacterBody2D"]
+position = Vector2(0, -15)
 script = ExtResource("1_kb2q7")
 
 [node name="texture" type="AnimatedSprite2D" parent="."]
@@ -33,10 +35,12 @@ scale = Vector2(0.55, 0.464583)
 sprite_frames = SubResource("SpriteFrames_ssdmj")
 
 [node name="collision" type="CollisionShape2D" parent="."]
-position = Vector2(0, -5)
+position = Vector2(-1, 15)
+rotation = 1.5708
 shape = SubResource("CapsuleShape2D_t85ge")
 
 [node name="Area2D" type="Area2D" parent="."]
+visible = false
 
 [node name="dialogcolision" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(0.5, -3.5)

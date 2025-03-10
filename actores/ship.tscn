@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://c67tbyk85afnc"]
+
+[ext_resource type="PackedScene" uid="uid://cxbe6wxobdms5" path="res://actores/pig.tscn" id="1_rtsm0"]
+[ext_resource type="Texture2D" uid="uid://5hgseodis87m" path="res://sprites/Cute_Fantasy_Free/Cute_Fantasy_Free/Animals/Sheep/Sheep.png" id="2_yjbyp"]
+
+[node name="sheepe" instance=ExtResource("1_rtsm0")]
+
+[node name="AnimatedSprite2D" parent="." index="0"]
+texture = ExtResource("2_yjbyp")

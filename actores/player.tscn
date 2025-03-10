@@ -61,8 +61,8 @@ func _physics_process(delta: float) -> void:
 "
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_4nw2e"]
-radius = 9.0
-height = 26.0
+radius = 3.0
+height = 14.0
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_d2hbd"]
 atlas = ExtResource("1_mmei1")
@@ -355,16 +355,18 @@ collision_mask = 15
 script = SubResource("GDScript_m2iiw")
 
 [node name="collision" type="CollisionShape2D" parent="."]
-position = Vector2(210, 147)
+position = Vector2(210, 158)
+rotation = 1.5708
 shape = SubResource("CapsuleShape2D_4nw2e")
 
 [node name="camera" type="Camera2D" parent="."]
 position = Vector2(211, 161)
 scale = Vector2(-10.9734, -22.6139)
-zoom = Vector2(2, 2)
+zoom = Vector2(1.8, 1.8)
 limit_left = 0
 limit_top = 0
-limit_bottom = 350
+limit_right = 1152
+limit_bottom = 641
 limit_smoothed = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
