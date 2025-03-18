@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=3 uid="uid://ciupvmkw4s5ve"]
+
+[ext_resource type="PackedScene" uid="uid://cwv0hqrwbfg1j" path="res://JOGADOR/Personagem Kenney/character-male-f.glb" id="1_x4a6j"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_r5abj"]
+radius = 0.318222
+height = 0.636443
+
+[node name="pescador_heroi" type="Node3D"]
+
+[node name="character-male-f2" parent="." instance=ExtResource("1_x4a6j")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.104288, 0, 0.484274)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="character-male-f2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0529941, 0)
+skeleton = NodePath("../../StaticBody3D")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="character-male-f2/MeshInstance3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.313247, 0)
+shape = SubResource("CapsuleShape3D_r5abj")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.104288, 0.313247, 0.484274)

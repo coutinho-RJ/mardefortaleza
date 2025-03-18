@@ -1,0 +1,29 @@
+[gd_scene load_steps=2 format=3 uid="uid://dy2g10vi0xbkw"]
+
+[ext_resource type="Script" path="res://Teste de Transição/menu_principal.gd" id="1_54ca0"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_54ca0")
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CenterContainer"]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="CenterContainer/HBoxContainer"]
+layout_mode = 2
+text = "NOVO JOGO"
+
+[connection signal="pressed" from="CenterContainer/HBoxContainer/Button" to="." method="novo_jogo"]

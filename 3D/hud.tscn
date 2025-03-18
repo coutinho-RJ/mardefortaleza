@@ -1,0 +1,102 @@
+[gd_scene load_steps=4 format=3 uid="uid://dwr1aey178p4"]
+
+[ext_resource type="Script" path="res://3D/madeira_container.gd" id="1_7e45h"]
+[ext_resource type="Texture2D" uid="uid://cl3nc0y2544gn" path="res://3D/GLB Piratas/94dd0d044efc77eb85b73a91be75415a-ilustracao-de-barco-historico-simples.webp" id="2_n0pv8"]
+[ext_resource type="PackedScene" uid="uid://lfgrdq35ctbp" path="res://3D/madeira.tscn" id="3_pf1nw"]
+
+[node name="HUD" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="madeira_container" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -1105.0
+offset_top = 18.0
+offset_right = -25.0
+offset_bottom = 114.0
+grow_horizontal = 0
+script = ExtResource("1_7e45h")
+
+[node name="life_Container" type="SubViewportContainer" parent="madeira_container"]
+custom_minimum_size = Vector2(96, 96)
+layout_mode = 2
+size_flags_horizontal = 0
+stretch = true
+
+[node name="SubViewport" type="SubViewport" parent="madeira_container/life_Container"]
+own_world_3d = true
+transparent_bg = true
+handle_input_locally = false
+gui_disable_input = true
+size = Vector2i(2, 2)
+render_target_update_mode = 4
+
+[node name="life_holder" type="Node3D" parent="madeira_container/life_Container/SubViewport"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 10.7956, -83.3758)
+
+[node name="life_icon" type="Sprite3D" parent="madeira_container/life_Container/SubViewport/life_holder"]
+transform = Transform3D(8, 0, 0, 0, 7.76355, -1.93063, 0, 1.93063, 7.76355, -143.221, 5.80717, -9.67043)
+texture = ExtResource("2_n0pv8")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="madeira_container/life_Container/SubViewport"]
+light_color = Color(0.382671, 0.174257, 0.0373362, 1)
+
+[node name="Camera3D" type="Camera3D" parent="madeira_container/life_Container/SubViewport"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -144.45, 10.7765, -64.4756)
+
+[node name="life_label" type="Label" parent="madeira_container"]
+layout_mode = 2
+size_flags_horizontal = 2
+theme_override_colors/font_outline_color = Color(0.0457884, 0, 0.549543, 1)
+theme_override_constants/outline_size = 11
+theme_override_font_sizes/font_size = 64
+text = "0"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="madeira_container"]
+custom_minimum_size = Vector2(96, 96)
+layout_direction = 2
+layout_mode = 2
+size_flags_horizontal = 10
+size_flags_stretch_ratio = 15.12
+stretch = true
+
+[node name="SubViewport" type="SubViewport" parent="madeira_container/SubViewportContainer"]
+own_world_3d = true
+transparent_bg = true
+handle_input_locally = false
+gui_disable_input = true
+size = Vector2i(2, 2)
+render_target_update_mode = 4
+
+[node name="madeira_holder" type="Node3D" parent="madeira_container/SubViewportContainer/SubViewport"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 10.7956, -83.3758)
+
+[node name="madeira" parent="madeira_container/SubViewportContainer/SubViewport/madeira_holder" instance=ExtResource("3_pf1nw")]
+transform = Transform3D(4, 0, 0, 0, -1.74846e-07, -4, 0, 4, -1.74846e-07, 22.9693, 2.26044, -58.9402)
+
+[node name="Camera3D" type="Camera3D" parent="madeira_container/SubViewportContainer/SubViewport"]
+transform = Transform3D(0.996686, -0.0813471, 1.85647e-09, 0.078857, 0.966177, 0.245527, -0.0199729, -0.244714, 0.96939, 22.808, 22.9584, -102.458)
+current = true
+fov = 20.0
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="madeira_container/SubViewportContainer/SubViewport"]
+light_color = Color(0.382671, 0.174257, 0.0373362, 1)
+
+[node name="madeira_label" type="Label" parent="madeira_container"]
+layout_mode = 2
+size_flags_horizontal = 10
+theme_override_colors/font_outline_color = Color(0.0457884, 0, 0.549543, 1)
+theme_override_constants/outline_size = 11
+theme_override_font_sizes/font_size = 64
+text = "0"
+horizontal_alignment = 2
+vertical_alignment = 1

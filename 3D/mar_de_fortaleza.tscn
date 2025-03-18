@@ -1,7 +1,7 @@
-[gd_scene load_steps=32 format=3 uid="uid://isywsonkg0e8"]
+[gd_scene load_steps=45 format=3 uid="uid://isywsonkg0e8"]
 
+[ext_resource type="Script" path="res://3D/mar_de_fortaleza.gd" id="1_18jg7"]
 [ext_resource type="Texture2D" uid="uid://bl46u7hb7j1ns" path="res://3D/autumn_field_puresky_4k.hdr" id="1_cciaj"]
-[ext_resource type="Script" path="res://3D/interface.gd" id="1_i1kem"]
 [ext_resource type="PackedScene" uid="uid://bkaf3cyayyt5s" path="res://3D/barco.tscn" id="2_7tsr2"]
 [ext_resource type="Texture2D" uid="uid://pxkbx20nxa5o" path="res://3D/HUD/VIDA/SleekBars.png" id="2_nrc7e"]
 [ext_resource type="Texture2D" uid="uid://d1aq7s41uhgyt" path="res://3D/Water/bake01.png" id="3_7vcpa"]
@@ -21,7 +21,13 @@
 [ext_resource type="PackedScene" uid="uid://c3s8gi5ec2awc" path="res://3D/conjuntopedras_3.tscn" id="19_yqepk"]
 [ext_resource type="PackedScene" uid="uid://c2mf0meji1fh1" path="res://3D/grandenaviopirata.tscn" id="20_2mt1p"]
 [ext_resource type="PackedScene" uid="uid://lfgrdq35ctbp" path="res://3D/madeira.tscn" id="21_sg7n0"]
-[ext_resource type="Script" path="res://3D/navio_inimigo.gd" id="22_4xay2"]
+[ext_resource type="PackedScene" uid="uid://bxrhnwbfvs82i" path="res://3D/ilhao_1.tscn" id="24_p2myl"]
+[ext_resource type="PackedScene" uid="uid://dww2qrcc03lc1" path="res://3D/GLB Piratas/palm-detailed-straight.glb" id="25_b7mrs"]
+[ext_resource type="PackedScene" uid="uid://capnpfb11r4gu" path="res://3D/GLB Piratas/grass-plant.glb" id="26_lgxdd"]
+[ext_resource type="PackedScene" uid="uid://do5ygwsl3u3j1" path="res://3D/GLB Piratas/hole.glb" id="27_at6qa"]
+[ext_resource type="PackedScene" uid="uid://5vcyhu467ts2" path="res://3D/GLB Piratas/chest.glb" id="28_dpkhl"]
+[ext_resource type="PackedScene" uid="uid://ccvb2qwb2cpk2" path="res://3D/GLB Piratas/Steve.glb" id="30_cvi0v"]
+[ext_resource type="PackedScene" uid="uid://be0p3jvj7tdsk" path="res://3D/GLB Piratas/Princess Peach %F0%9F%8D%91.glb" id="31_rofaw"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_csuu8"]
 panorama = ExtResource("1_cciaj")
@@ -89,11 +95,35 @@ size = Vector3(100, 1, 100)
 [sub_resource type="BoxShape3D" id="BoxShape3D_r7g8x"]
 size = Vector3(4.62299, 9.99347, 11.923)
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_p2hg3"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_l3bta"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_i0jsi"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_hqrv4"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2ofmt"]
+
+[sub_resource type="FontVariation" id="FontVariation_s24wm"]
+
+[sub_resource type="Theme" id="Theme_uvkxw"]
+default_font = SubResource("FontVariation_s24wm")
+default_font_size = 48
+Button/colors/font_color = Color(0.875, 0.875, 0.875, 1)
+Button/colors/font_focus_color = Color(0.844867, 0.844867, 7.70092e-07, 1)
+Button/colors/font_hover_color = Color(0.94902, 0.94902, 0.0588235, 1)
+Button/colors/font_hover_pressed_color = Color(0.101961, 0.172549, 1, 1)
+Button/styles/focus = SubResource("StyleBoxEmpty_l3bta")
+Button/styles/hover = SubResource("StyleBoxEmpty_i0jsi")
+Button/styles/hover_pressed = SubResource("StyleBoxEmpty_hqrv4")
+Button/styles/normal = SubResource("StyleBoxEmpty_2ofmt")
+
 [node name="Mar de Fortaleza" type="Node3D"]
 transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0, 0, 0)
+script = ExtResource("1_18jg7")
 
 [node name="Interface" type="CanvasLayer" parent="."]
-script = ExtResource("1_i1kem")
 
 [node name="barracontainer" type="Sprite2D" parent="Interface"]
 position = Vector2(16687, 8017)
@@ -113,29 +143,10 @@ region_filter_clip_enabled = true
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_gkm6i")
 
-[node name="Barco" parent="." instance=ExtResource("2_7tsr2")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.0222, 1.40428, -33.3228)
-
-[node name="SpotLight3D" type="SpotLight3D" parent="Barco"]
-transform = Transform3D(0.2, 0, 0, 0, -0.185602, 0.0745101, 0, -0.0745101, -0.185602, 0, 11.0694, -1.74453)
-light_energy = 11.118
-spot_range = 529.095
-spot_attenuation = 0.36
-spot_angle = 22.23
-
 [node name="ItensaoMar" type="Node3D" parent="."]
 
-[node name="Madeira" parent="ItensaoMar" instance=ExtResource("21_sg7n0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.3716, 1.39838, 1.90735e-06)
-
-[node name="Madeira2" parent="ItensaoMar" instance=ExtResource("21_sg7n0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 41.769, 1.398, 10.259)
-
-[node name="Madeira3" parent="ItensaoMar" instance=ExtResource("21_sg7n0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 62.7088, 1.398, 25.2989)
-
-[node name="Madeira4" parent="ItensaoMar" instance=ExtResource("21_sg7n0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.396, 1.398, 17.552)
+[node name="novaMadeira6" parent="ItensaoMar" instance=ExtResource("21_sg7n0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.7732, 1.32824, -1.45187)
 
 [node name="NavigationRegion3D" type="NavigationRegion3D" parent="."]
 navigation_mesh = SubResource("NavigationMesh_1g44x")
@@ -161,10 +172,8 @@ transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 0, 0)
 [node name="conjuntopedras2" parent="NavigationRegion3D/ConjPedras" instance=ExtResource("18_n3xs4")]
 transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 36.0548, 0, 24.104)
 
-[node name="NavioInimigo" type="CharacterBody3D" parent="NavigationRegion3D" node_paths=PackedStringArray("target")]
+[node name="NavioInimigo" type="CharacterBody3D" parent="NavigationRegion3D"]
 transform = Transform3D(-1.99992, 0.000332741, 0.0177987, -2.49561e-10, 1.99965, -0.0373828, -0.0178018, -0.0373813, -1.99957, -19.0391, -0.1203, 47.1951)
-script = ExtResource("22_4xay2")
-target = NodePath("../../Barco")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/NavioInimigo"]
 transform = Transform3D(0.999964, 1.17143e-08, 0, 2.15368e-09, 1, 0, 1.58325e-07, 9.574e-07, 1, -0.156341, 4.99704, -0.64838)
@@ -174,3 +183,91 @@ shape = SubResource("BoxShape3D_r7g8x")
 transform = Transform3D(1, 1.45519e-11, 0, 0, 1, 0, 0, 1.86265e-09, 1, 0, 0, 0)
 
 [node name="nav_agent" type="NavigationAgent3D" parent="NavigationRegion3D/NavioInimigo"]
+
+[node name="ilhao1" parent="." instance=ExtResource("24_p2myl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25.919, 0.961929, -1.91125)
+
+[node name="palm-detailed-straight2" parent="ilhao1" instance=ExtResource("25_b7mrs")]
+transform = Transform3D(1, 0, 0, 0, 0.999548, -0.03005, 0, 0.03005, 0.999548, -0.0575714, 0.365944, 0.595842)
+
+[node name="grass-plant2" parent="ilhao1" instance=ExtResource("26_lgxdd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.59338, 0.296333, 0)
+
+[node name="hole2" parent="ilhao1" instance=ExtResource("27_at6qa")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.6521, 0.232654, 0)
+
+[node name="chest2" parent="ilhao1" instance=ExtResource("28_dpkhl")]
+transform = Transform3D(-0.999677, 0, -0.0254267, 0, 1, 0, 0.0254267, 0, -0.999677, 1.41323, 0.241466, 0.292435)
+
+[node name="ilhao2" parent="." instance=ExtResource("24_p2myl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -84.9408, 1.52592, -90.7192)
+
+[node name="palm-detailed-straight2" parent="ilhao2" instance=ExtResource("25_b7mrs")]
+transform = Transform3D(1, 0, 0, 0, 0.999548, -0.03005, 0, 0.03005, 0.999548, -0.0575714, 0.365944, 0.595842)
+
+[node name="grass-plant2" parent="ilhao2" instance=ExtResource("26_lgxdd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.59338, 0.296333, 0)
+
+[node name="hole2" parent="ilhao2" instance=ExtResource("27_at6qa")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.6521, 0.232654, 0)
+
+[node name="Root Scene" parent="ilhao2" instance=ExtResource("30_cvi0v")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.83344, 0.252485, 0.854401)
+
+[node name="ilhao3" parent="." instance=ExtResource("24_p2myl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 85.2346, 1.53624, -90.5276)
+
+[node name="palm-detailed-straight2" parent="ilhao3" instance=ExtResource("25_b7mrs")]
+transform = Transform3D(1, 0, 0, 0, 0.999548, -0.03005, 0, 0.03005, 0.999548, -0.0575562, 0.259538, 0.59584)
+
+[node name="grass-plant2" parent="ilhao3" instance=ExtResource("26_lgxdd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.59338, 0.296333, 0)
+
+[node name="hole2" parent="ilhao3" instance=ExtResource("27_at6qa")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.6521, 0.232654, 0)
+
+[node name="Princess Peach _F0_9F_8D_91" parent="ilhao3" instance=ExtResource("31_rofaw")]
+transform = Transform3D(-0.997564, 0, 0.0697564, 0, 1, 0, -0.0697564, 0, -0.997564, 1.42569, 1.4411, -1.23594)
+
+[node name="game_over" type="CanvasLayer" parent="."]
+process_mode = 3
+visible = false
+
+[node name="ColorRect" type="ColorRect" parent="game_over"]
+material = SubResource("ShaderMaterial_p2hg3")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="menu_game_over" type="VBoxContainer" parent="game_over"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -218.0
+offset_top = -69.0
+offset_right = 218.0
+offset_bottom = 69.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_uvkxw")
+
+[node name="Tentar_btn" type="Button" parent="game_over/menu_game_over"]
+layout_mode = 2
+text = "Tentar Novamente"
+
+[node name="Desistir_btn2" type="Button" parent="game_over/menu_game_over"]
+layout_mode = 2
+text = "Eu desisto"
+
+[node name="Marker3D" type="Marker3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 34.2019, 0, 66.4915)
+
+[node name="Barco" parent="." instance=ExtResource("2_7tsr2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.1444, 1.4888, -16.5388)
+
+[connection signal="pressed" from="game_over/menu_game_over/Tentar_btn" to="game_over" method="_on_tentar_btn_pressed"]
+[connection signal="pressed" from="game_over/menu_game_over/Desistir_btn2" to="game_over" method="_on_desistir_btn_2_pressed"]

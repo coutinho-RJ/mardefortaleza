@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://ci2hi4l1pwi4k"]
+
+[ext_resource type="Script" path="res://3D/FX/portal.gd" id="1_8r4qs"]
+[ext_resource type="Texture2D" uid="uid://d4nuio1tpiits" path="res://3D/FX/Imagem-removebg-preview.png" id="2_xmu7r"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_2jy0f"]
+size = Vector3(10, 20, 1)
+
+[node name="Portal" type="Area3D"]
+script = ExtResource("1_8r4qs")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_2jy0f")
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+transform = Transform3D(1.881, 0, 0, 0, 1.882, 0, 0, 0, 1.29, 0, 0, 0.571223)
+texture = ExtResource("2_xmu7r")
+
+[connection signal="body_entered" from="." to="." method="mudarcena"]

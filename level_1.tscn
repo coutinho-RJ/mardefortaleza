@@ -215,7 +215,7 @@ position = Vector2(677, 67)
 
 [node name="transition_area" type="Area2D" parent="."]
 script = ExtResource("10_vl3vc")
-cena_destino = "res://Terrain/terrain_teste_1.tscn"
+cena_destino = "res://3D/mar_de_fortaleza.tscn"
 
 [node name="transition_colision_1" type="CollisionShape2D" parent="transition_area"]
 position = Vector2(3, 80)

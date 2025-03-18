@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://bkcdbkfhlm4uj"]
+
+[ext_resource type="PackedScene" uid="uid://cwv0hqrwbfg1j" path="res://JOGADOR/character-male-f.glb" id="1_88rgo"]
+
+[node name="Heroi" type="Node3D"]
+
+[node name="character-male-f2" parent="." instance=ExtResource("1_88rgo")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 0, 1)

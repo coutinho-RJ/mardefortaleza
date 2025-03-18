@@ -13,6 +13,15 @@ extends VehicleBody3D
 @export var rear_left_wheel: VehicleWheel3D = null
 @export var rear_right_wheel: VehicleWheel3D = null
 
+@export var health := 5
+var is_dead := false
+var knockbacked := false
+var gravity = 0
+var movement_velocity : Vector3
+
+@onready var madeira_container: HBoxContainer = $HUD/madeira_container
+@onready var madeira := 0
+
 func _ready():
 #	if Interface:
 #		VidaAlterada.connect(Interface.AtualizarBarraVida)
@@ -50,7 +59,39 @@ func _physics_process(delta):
 
 	steer_angle = clamp(steer_angle, -max_steering_angle, max_steering_angle)
 
-	apply_impulse(Vector3(0, 0, engine_force))
+	apply_impulse(basis.z * engine_force)
 
 	front_left_wheel.steering = steer_angle
 	front_right_wheel.steering = steer_angle
+	
+func collect_madeira():
+	madeira += 1
+	madeira_container.update_madeira(madeira)
+		
+func knockback(impact_point: Vector3, force: Vector3) ->void:
+	madeira_container.update_life(health)	
+	force.y = abs(force.y)
+	movement_velocity = force.limit_length(15.0)	
+
+func _on_hurtbox_body_entered(body):
+	if health > 0:
+		health -= 1
+	else:
+		is_dead = true
+		get_parent().get_node("game_over").visible = true
+		get_tree().paused = true
+	var body_collision = (body.global_position - global_position)
+	var force = -body_collision
+	force *= 10.0
+	gravity = -5.0
+	knockback(body_collision, force)
+	knockbacked = true
+	await get_tree().create_timer(0.3).timeout
+	knockbacked = false
+			
+		
+		
+		
+		
+		
+		

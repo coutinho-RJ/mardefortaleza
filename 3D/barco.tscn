@@ -1,6 +1,9 @@
-[gd_scene load_steps=8 format=4 uid="uid://bkaf3cyayyt5s"]
+[gd_scene load_steps=11 format=4 uid="uid://bkaf3cyayyt5s"]
 
-[ext_resource type="Script" path="res://3D/vehicle_body_3d.gd" id="1_p6qh2"]
+[ext_resource type="Script" path="res://3D/vehicle_body_3d.gd" id="1_bhyn2"]
+[ext_resource type="PackedScene" uid="uid://bkcdbkfhlm4uj" path="res://3D/heroi.tscn" id="2_cdcr8"]
+[ext_resource type="PackedScene" uid="uid://b7wcc6daeinu6" path="res://3D/GLB Piratas/Low Poly Dratini.glb" id="3_rvho0"]
+[ext_resource type="PackedScene" uid="uid://dwr1aey178p4" path="res://3D/hud.tscn" id="4_l1c04"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ddgry"]
 resource_name = "02___Default"
@@ -107,7 +110,7 @@ size = Vector3(4.14127, 3.57335, 8.59478)
 [node name="Barco" type="VehicleBody3D" node_paths=PackedStringArray("front_left_wheel", "front_right_wheel", "rear_left_wheel", "rear_right_wheel")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.4888, 0)
 mass = 1500.0
-script = ExtResource("1_p6qh2")
+script = ExtResource("1_bhyn2")
 front_left_wheel = NodePath("wheel_left2")
 front_right_wheel = NodePath("wheel_right2")
 rear_left_wheel = NodePath("wheel_left")
@@ -153,3 +156,11 @@ use_as_steering = true
 wheel_friction_slip = 0.5
 suspension_travel = 0.1
 suspension_stiffness = 5.0
+
+[node name="Heroi" parent="." instance=ExtResource("2_cdcr8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.10359, 1.3808, -3.28395)
+
+[node name="Low Poly Dratini" parent="." instance=ExtResource("3_rvho0")]
+transform = Transform3D(-0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, -0.707107, 0, 1.90763, 5.09784)
+
+[node name="HUD" parent="." instance=ExtResource("4_l1c04")]
