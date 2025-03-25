@@ -4,6 +4,7 @@ const ROTATION_SPEED: = 50
 
 var start_pos := position.y
 var end_pos := position.y + 0.5
+@onready var coletar: AudioStreamPlayer = $coletar as AudioStreamPlayer
 
 
 # Called when the node enters the scene tree for the first time.
@@ -21,4 +22,7 @@ func _process(delta: float) -> void:
 func _on_body_entered(body: Node3D) -> void:
 	if body.name == "Barco":
 		body.collect_madeira()
+		coletar.play()
+		await coletar.finished
 		queue_free()
+		

@@ -1,4 +1,4 @@
-[gd_scene load_steps=45 format=3 uid="uid://isywsonkg0e8"]
+[gd_scene load_steps=61 format=3 uid="uid://isywsonkg0e8"]
 
 [ext_resource type="Script" path="res://3D/mar_de_fortaleza.gd" id="1_18jg7"]
 [ext_resource type="Texture2D" uid="uid://bl46u7hb7j1ns" path="res://3D/autumn_field_puresky_4k.hdr" id="1_cciaj"]
@@ -26,8 +26,16 @@
 [ext_resource type="PackedScene" uid="uid://capnpfb11r4gu" path="res://3D/GLB Piratas/grass-plant.glb" id="26_lgxdd"]
 [ext_resource type="PackedScene" uid="uid://do5ygwsl3u3j1" path="res://3D/GLB Piratas/hole.glb" id="27_at6qa"]
 [ext_resource type="PackedScene" uid="uid://5vcyhu467ts2" path="res://3D/GLB Piratas/chest.glb" id="28_dpkhl"]
+[ext_resource type="AudioStream" uid="uid://bdp4troioqiko" path="res://3D/Sound/CidadeSound.wav" id="29_wqs8x"]
 [ext_resource type="PackedScene" uid="uid://ccvb2qwb2cpk2" path="res://3D/GLB Piratas/Steve.glb" id="30_cvi0v"]
+[ext_resource type="AudioStream" uid="uid://nrhbe7a3dg12" path="res://3D/Sound/MarCalmo.wav" id="30_ymfvc"]
+[ext_resource type="PackedScene" uid="uid://bt0jbldushf7v" path="res://3D/GLB Piratas/tower-complete-large.glb" id="31_4dp4m"]
 [ext_resource type="PackedScene" uid="uid://be0p3jvj7tdsk" path="res://3D/GLB Piratas/Princess Peach %F0%9F%8D%91.glb" id="31_rofaw"]
+[ext_resource type="PackedScene" uid="uid://d2v010kpqyfxt" path="res://3D/GLB Piratas/rocks-sand-a.glb" id="32_ap470"]
+[ext_resource type="PackedScene" uid="uid://bdwf8554584al" path="res://3D/GLB Piratas/structure-fence-sides.glb" id="33_0jf0j"]
+[ext_resource type="PackedScene" uid="uid://cbpwhfwjo4gho" path="res://3D/GLB Piratas/platform.glb" id="34_kqhq3"]
+[ext_resource type="PackedScene" uid="uid://fxppoi0n01nc" path="res://3D/JOGADOR/character-female-a.glb" id="35_cx4yf"]
+[ext_resource type="PackedScene" uid="uid://b7ly0dijcrnfi" path="res://3D/JOGADOR/character-male-a.glb" id="36_jrd82"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_csuu8"]
 panorama = ExtResource("1_cciaj")
@@ -119,6 +127,26 @@ Button/styles/hover = SubResource("StyleBoxEmpty_i0jsi")
 Button/styles/hover_pressed = SubResource("StyleBoxEmpty_hqrv4")
 Button/styles/normal = SubResource("StyleBoxEmpty_2ofmt")
 
+[sub_resource type="ArrayMesh" id="ArrayMesh_pdhbo"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_t67fh"]
+radius = 1.87687
+height = 11.1121
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_fyo37"]
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_0g444"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_rwjus"]
+size = Vector3(5.13879, 3.02289, 4.33997)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_wk3kp"]
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_w31ln"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_lwcpx"]
+size = Vector3(17.4752, 2.71277, 1.79562)
+
 [node name="Mar de Fortaleza" type="Node3D"]
 transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0, 0, 0)
 script = ExtResource("1_18jg7")
@@ -148,6 +176,12 @@ environment = SubResource("Environment_gkm6i")
 [node name="novaMadeira6" parent="ItensaoMar" instance=ExtResource("21_sg7n0")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.7732, 1.32824, -1.45187)
 
+[node name="novaMadeira7" parent="ItensaoMar" instance=ExtResource("21_sg7n0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -28.1247, 1.32824, -40.71)
+
+[node name="novaMadeira8" parent="ItensaoMar" instance=ExtResource("21_sg7n0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 77.3466, 1.32824, -84.9271)
+
 [node name="NavigationRegion3D" type="NavigationRegion3D" parent="."]
 navigation_mesh = SubResource("NavigationMesh_1g44x")
 
@@ -163,14 +197,26 @@ shape = SubResource("BoxShape3D_d3uat")
 
 [node name="ConjPedras" type="Node3D" parent="NavigationRegion3D"]
 
-[node name="conjuntopedras3" parent="NavigationRegion3D/ConjPedras" instance=ExtResource("19_yqepk")]
-transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -31.5741, 0, 33.4761)
-
 [node name="conjuntopedras1" parent="NavigationRegion3D/ConjPedras" instance=ExtResource("18_xbvf6")]
-transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 0, 0)
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -3.05176e-06, 0, 3.05176e-06)
+
+[node name="conjuntopedras4" parent="NavigationRegion3D/ConjPedras" instance=ExtResource("18_xbvf6")]
+transform = Transform3D(0.0976451, 0, -4.99905, 0, 5, 0, 4.99905, 0, 0.0976451, 90.4528, 0, 16.2729)
+
+[node name="conjuntopedras5" parent="NavigationRegion3D/ConjPedras" instance=ExtResource("18_xbvf6")]
+transform = Transform3D(0.0976451, 0, -4.99905, 0, 5, 0, 4.99905, 0, 0.0976451, -90.8109, 0, -38.3557)
 
 [node name="conjuntopedras2" parent="NavigationRegion3D/ConjPedras" instance=ExtResource("18_n3xs4")]
 transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 36.0548, 0, 24.104)
+
+[node name="conjuntopedras3" parent="NavigationRegion3D/ConjPedras" instance=ExtResource("19_yqepk")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -31.5741, 0, 33.4761)
+
+[node name="conjuntopedras6" parent="NavigationRegion3D/ConjPedras" instance=ExtResource("19_yqepk")]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 26.5144, 1.28746, -89.5293)
+
+[node name="conjuntopedras7" parent="NavigationRegion3D/ConjPedras" instance=ExtResource("19_yqepk")]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -48.6781, 1.28746, 93.4815)
 
 [node name="NavioInimigo" type="CharacterBody3D" parent="NavigationRegion3D"]
 transform = Transform3D(-1.99992, 0.000332741, 0.0177987, -2.49561e-10, 1.99965, -0.0373828, -0.0178018, -0.0373813, -1.99957, -19.0391, -0.1203, 47.1951)
@@ -199,6 +245,21 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.6521, 0.232654, 0)
 [node name="chest2" parent="ilhao1" instance=ExtResource("28_dpkhl")]
 transform = Transform3D(-0.999677, 0, -0.0254267, 0, 1, 0, 0.0254267, 0, -0.999677, 1.41323, 0.241466, 0.292435)
 
+[node name="ilhao4" parent="." instance=ExtResource("24_p2myl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 87.5134, 0.961929, 67.3734)
+
+[node name="palm-detailed-straight2" parent="ilhao4" instance=ExtResource("25_b7mrs")]
+transform = Transform3D(1, 0, 0, 0, 0.999548, -0.03005, 0, 0.03005, 0.999548, -0.0575714, 0.365944, 0.595842)
+
+[node name="grass-plant2" parent="ilhao4" instance=ExtResource("26_lgxdd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.59338, 0.296333, 0)
+
+[node name="hole2" parent="ilhao4" instance=ExtResource("27_at6qa")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.6521, 0.232654, 0)
+
+[node name="chest2" parent="ilhao4" instance=ExtResource("28_dpkhl")]
+transform = Transform3D(-0.999677, 0, -0.0254267, 0, 1, 0, 0.0254267, 0, -0.999677, 1.41323, 0.241466, 0.292435)
+
 [node name="ilhao2" parent="." instance=ExtResource("24_p2myl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -84.9408, 1.52592, -90.7192)
 
@@ -214,8 +275,23 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.6521, 0.232654, 0)
 [node name="Root Scene" parent="ilhao2" instance=ExtResource("30_cvi0v")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.83344, 0.252485, 0.854401)
 
+[node name="ilhao5" parent="." instance=ExtResource("24_p2myl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -84.9408, 1.52592, 70.4501)
+
+[node name="palm-detailed-straight2" parent="ilhao5" instance=ExtResource("25_b7mrs")]
+transform = Transform3D(1, 0, 0, 0, 0.999548, -0.03005, 0, 0.03005, 0.999548, -0.0575714, 0.365944, 0.595842)
+
+[node name="grass-plant2" parent="ilhao5" instance=ExtResource("26_lgxdd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.59338, 0.296333, 0)
+
+[node name="hole2" parent="ilhao5" instance=ExtResource("27_at6qa")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.6521, 0.232654, 0)
+
+[node name="Root Scene" parent="ilhao5" instance=ExtResource("30_cvi0v")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.83344, 0.252485, 0.854401)
+
 [node name="ilhao3" parent="." instance=ExtResource("24_p2myl")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 85.2346, 1.53624, -90.5276)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 81.6705, 1.53624, -90.5276)
 
 [node name="palm-detailed-straight2" parent="ilhao3" instance=ExtResource("25_b7mrs")]
 transform = Transform3D(1, 0, 0, 0, 0.999548, -0.03005, 0, 0.03005, 0.999548, -0.0575562, 0.259538, 0.59584)
@@ -227,6 +303,21 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.59338, 0.296333, 0)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.6521, 0.232654, 0)
 
 [node name="Princess Peach _F0_9F_8D_91" parent="ilhao3" instance=ExtResource("31_rofaw")]
+transform = Transform3D(-0.997564, 0, 0.0697564, 0, 1, 0, -0.0697564, 0, -0.997564, 1.42569, 1.4411, -1.23594)
+
+[node name="ilhao6" parent="." instance=ExtResource("24_p2myl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -29.6968, 1.53624, 10.1168)
+
+[node name="palm-detailed-straight2" parent="ilhao6" instance=ExtResource("25_b7mrs")]
+transform = Transform3D(1, 0, 0, 0, 0.999548, -0.03005, 0, 0.03005, 0.999548, -0.0575562, 0.259538, 0.59584)
+
+[node name="grass-plant2" parent="ilhao6" instance=ExtResource("26_lgxdd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.59338, 0.296333, 0)
+
+[node name="hole2" parent="ilhao6" instance=ExtResource("27_at6qa")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.6521, 0.232654, 0)
+
+[node name="Princess Peach _F0_9F_8D_91" parent="ilhao6" instance=ExtResource("31_rofaw")]
 transform = Transform3D(-0.997564, 0, 0.0697564, 0, 1, 0, -0.0697564, 0, -0.997564, 1.42569, 1.4411, -1.23594)
 
 [node name="game_over" type="CanvasLayer" parent="."]
@@ -267,7 +358,206 @@ text = "Eu desisto"
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 34.2019, 0, 66.4915)
 
 [node name="Barco" parent="." instance=ExtResource("2_7tsr2")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.1444, 1.4888, -16.5388)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.57107, 1.4888, -45.5278)
+
+[node name="SoundAmbiente" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("29_wqs8x")
+volume_db = -5.0
+autoplay = true
+
+[node name="SoundMar" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("30_ymfvc")
+volume_db = 20.0
+autoplay = true
+
+[node name="Farois" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 84.8826, 1.53624, -90.5276)
+
+[node name="Farol01" parent="Farois" instance=ExtResource("31_4dp4m")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 7.96732, 0.129744, -2.97395)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Farois/Farol01"]
+mesh = SubResource("ArrayMesh_pdhbo")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Farois/Farol01/MeshInstance3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Farois/Farol01/MeshInstance3D/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.58134, 0)
+shape = SubResource("CapsuleShape3D_t67fh")
+
+[node name="StaticBody3D2" type="StaticBody3D" parent="Farois/Farol01/MeshInstance3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Farois/Farol01/MeshInstance3D/StaticBody3D2"]
+shape = SubResource("ConvexPolygonShape3D_fyo37")
+
+[node name="Farol02" parent="Farois" instance=ExtResource("31_4dp4m")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 5.67176, 0.129744, 179.627)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Farois/Farol02"]
+mesh = SubResource("ArrayMesh_pdhbo")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Farois/Farol02/MeshInstance3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Farois/Farol02/MeshInstance3D/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.58134, 0)
+shape = SubResource("CapsuleShape3D_t67fh")
+
+[node name="StaticBody3D2" type="StaticBody3D" parent="Farois/Farol02/MeshInstance3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Farois/Farol02/MeshInstance3D/StaticBody3D2"]
+shape = SubResource("ConvexPolygonShape3D_fyo37")
+
+[node name="Farol03" parent="Farois" instance=ExtResource("31_4dp4m")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -174.087, 0.129744, 179.627)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Farois/Farol03"]
+mesh = SubResource("ArrayMesh_pdhbo")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Farois/Farol03/MeshInstance3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Farois/Farol03/MeshInstance3D/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.58134, 0)
+shape = SubResource("CapsuleShape3D_t67fh")
+
+[node name="StaticBody3D2" type="StaticBody3D" parent="Farois/Farol03/MeshInstance3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Farois/Farol03/MeshInstance3D/StaticBody3D2"]
+shape = SubResource("ConvexPolygonShape3D_fyo37")
+
+[node name="Farol04" parent="Farois" instance=ExtResource("31_4dp4m")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -180.187, 0.129744, -4.62144)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Farois/Farol04"]
+mesh = SubResource("ArrayMesh_pdhbo")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Farois/Farol04/MeshInstance3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Farois/Farol04/MeshInstance3D/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.58134, 0)
+shape = SubResource("CapsuleShape3D_t67fh")
+
+[node name="StaticBody3D2" type="StaticBody3D" parent="Farois/Farol04/MeshInstance3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Farois/Farol04/MeshInstance3D/StaticBody3D2"]
+shape = SubResource("ConvexPolygonShape3D_fyo37")
+
+[node name="PedraAreia" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -69.7724, 1.4888, 62.8952)
+
+[node name="PedraAreia01" parent="PedraAreia" instance=ExtResource("32_ap470")]
+transform = Transform3D(-0.0779762, 0, 3.99924, 0, 4, 0, -3.99924, 0, -0.0779762, 160.103, -0.21694, -117.552)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="PedraAreia/PedraAreia01"]
+mesh = SubResource("ArrayMesh_0g444")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="PedraAreia/PedraAreia01/MeshInstance3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="PedraAreia/PedraAreia01/MeshInstance3D/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.106384, 1.46402, -0.00738525)
+shape = SubResource("BoxShape3D_rwjus")
+
+[node name="StaticBody3D2" type="StaticBody3D" parent="PedraAreia/PedraAreia01/MeshInstance3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="PedraAreia/PedraAreia01/MeshInstance3D/StaticBody3D2"]
+shape = SubResource("ConvexPolygonShape3D_wk3kp")
+
+[node name="PedraAreia04" parent="PedraAreia" instance=ExtResource("32_ap470")]
+transform = Transform3D(-0.0779762, 0, 3.99924, 0, 4, 0, -3.99924, 0, -0.0779762, -20.4123, -0.21694, -20.4942)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="PedraAreia/PedraAreia04"]
+mesh = SubResource("ArrayMesh_0g444")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="PedraAreia/PedraAreia04/MeshInstance3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="PedraAreia/PedraAreia04/MeshInstance3D/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.106384, 1.46402, -0.00738525)
+shape = SubResource("BoxShape3D_rwjus")
+
+[node name="StaticBody3D2" type="StaticBody3D" parent="PedraAreia/PedraAreia04/MeshInstance3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="PedraAreia/PedraAreia04/MeshInstance3D/StaticBody3D2"]
+shape = SubResource("ConvexPolygonShape3D_wk3kp")
+
+[node name="PedraAreia02" parent="PedraAreia" instance=ExtResource("32_ap470")]
+transform = Transform3D(3.99924, 0, 0.0779065, 0, 4, 0, -0.0779065, 0, 3.99924, 114.158, -0.21694, 28.6023)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="PedraAreia/PedraAreia02"]
+mesh = SubResource("ArrayMesh_0g444")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="PedraAreia/PedraAreia02/MeshInstance3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="PedraAreia/PedraAreia02/MeshInstance3D/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.106384, 1.46402, -0.00738525)
+shape = SubResource("BoxShape3D_rwjus")
+
+[node name="StaticBody3D2" type="StaticBody3D" parent="PedraAreia/PedraAreia02/MeshInstance3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="PedraAreia/PedraAreia02/MeshInstance3D/StaticBody3D2"]
+shape = SubResource("ConvexPolygonShape3D_wk3kp")
+
+[node name="PedraAreia03" parent="PedraAreia" instance=ExtResource("32_ap470")]
+transform = Transform3D(3.99924, 0, 0.0779065, 0, 4, 0, -0.0779065, 0, 3.99924, 35.6125, -0.21694, -155.155)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="PedraAreia/PedraAreia03"]
+mesh = SubResource("ArrayMesh_0g444")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="PedraAreia/PedraAreia03/MeshInstance3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="PedraAreia/PedraAreia03/MeshInstance3D/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.106384, 1.46402, -0.00738525)
+shape = SubResource("BoxShape3D_rwjus")
+
+[node name="StaticBody3D2" type="StaticBody3D" parent="PedraAreia/PedraAreia03/MeshInstance3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="PedraAreia/PedraAreia03/MeshInstance3D/StaticBody3D2"]
+shape = SubResource("ConvexPolygonShape3D_wk3kp")
+
+[node name="Estruturas" type="Node3D" parent="."]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 85.1824, 1.4167, 89.0636)
+
+[node name="ponte01" parent="Estruturas" instance=ExtResource("33_0jf0j")]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Estruturas/ponte01"]
+mesh = SubResource("ArrayMesh_w31ln")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Estruturas/ponte01/MeshInstance3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Estruturas/ponte01/MeshInstance3D/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.38261, 0.856384, 0.28154)
+shape = SubResource("BoxShape3D_lwcpx")
+
+[node name="ponte02" parent="Estruturas" instance=ExtResource("33_0jf0j")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.45431, 0, 0)
+
+[node name="ponte03" parent="Estruturas" instance=ExtResource("33_0jf0j")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.91921, 0, 0)
+
+[node name="ponte04" parent="Estruturas" instance=ExtResource("33_0jf0j")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.38939, 0, 0)
+
+[node name="ponte05" parent="Estruturas" instance=ExtResource("33_0jf0j")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.83228, 0, 0)
+
+[node name="ponte06" parent="Estruturas" instance=ExtResource("33_0jf0j")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.3393, 0, 0)
+
+[node name="ponte07" parent="Estruturas" instance=ExtResource("33_0jf0j")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.8251, 0, 0)
+
+[node name="Escravos" type="Node3D" parent="."]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 58.4152, 0.462593, -37.6823)
+
+[node name="escravoMulher" parent="Escravos" instance=ExtResource("35_cx4yf")]
+transform = Transform3D(0.28278, 0, -0.748355, 0, 0.8, 0, 0.748355, 0, 0.28278, 12.3308, 0.463833, -12.1988)
+
+[node name="pisoMulher" parent="Escravos/escravoMulher" instance=ExtResource("34_kqhq3")]
+transform = Transform3D(0.249389, 0, -0.0174653, 0, 0.25, 0, 0.0174653, 0, 0.249389, 0.0339375, -0.102079, -0.065237)
+
+[node name="escravoHomem" parent="Escravos" instance=ExtResource("36_jrd82")]
+transform = Transform3D(-0.200304, 0, 0.774518, 0, 0.8, 0, -0.774518, 0, -0.200304, -50.8754, 0.787774, 5.70892)
+
+[node name="pisoHomem" parent="Escravos/escravoHomem" instance=ExtResource("34_kqhq3")]
+transform = Transform3D(0.195744, 0, -0.155513, 0, 0.25, 0, 0.155513, 0, 0.195744, 0.00540161, -0.0466077, 0.0758467)
 
 [connection signal="pressed" from="game_over/menu_game_over/Tentar_btn" to="game_over" method="_on_tentar_btn_pressed"]
 [connection signal="pressed" from="game_over/menu_game_over/Desistir_btn2" to="game_over" method="_on_desistir_btn_2_pressed"]

@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://cbrgcns5ht4q5"]
+
+[ext_resource type="PackedScene" uid="uid://d2v010kpqyfxt" path="res://3D/GLB Piratas/rocks-sand-a.glb" id="1_6kble"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_earos"]
+size = Vector3(3.47757, 2.83105, 2.93114)
+
+[node name="PedraAreia" type="Node3D"]
+
+[node name="rocks-sand-a2" parent="." instance=ExtResource("1_6kble")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.417196, 0, 0.483519)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="rocks-sand-a2"]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="rocks-sand-a2/MeshInstance3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.223271, 1.58679, 0.0438499)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="rocks-sand-a2/MeshInstance3D/StaticBody3D"]
+shape = SubResource("BoxShape3D_earos")

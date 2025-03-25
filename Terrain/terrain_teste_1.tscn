@@ -1,4 +1,4 @@
-[gd_scene load_steps=49 format=4 uid="uid://gimpjmfyalju"]
+[gd_scene load_steps=50 format=4 uid="uid://gimpjmfyalju"]
 
 [ext_resource type="Texture2D" uid="uid://doq6x5oog6gel" path="res://sprites/Cute_Fantasy_Free/Cute_Fantasy_Free/Tiles/Beach_Tile.png" id="1_tp51u"]
 [ext_resource type="Texture2D" uid="uid://pf03kjdxi4iu" path="res://sprites/Cute_Fantasy_Free/Cute_Fantasy_Free/Tiles/Cliff_Tile.png" id="2_vi54f"]
@@ -21,6 +21,7 @@
 [ext_resource type="PackedScene" uid="uid://c67tbyk85afnc" path="res://actores/ship.tscn" id="21_culfq"]
 [ext_resource type="PackedScene" uid="uid://b6sliw7yypo5c" path="res://actores/player.tscn" id="21_vx4b1"]
 [ext_resource type="PackedScene" uid="uid://cxbe6wxobdms5" path="res://actores/pig.tscn" id="22_dcb7r"]
+[ext_resource type="AudioStream" uid="uid://bdp4troioqiko" path="res://3D/Sound/CidadeSound.wav" id="22_pl505"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_oo42n"]
 texture = ExtResource("1_tp51u")
@@ -2872,5 +2873,9 @@ position = Vector2(136, 270)
 
 [node name="sheepe2" parent="Animals_right" instance=ExtResource("21_culfq")]
 position = Vector2(136, 238)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("22_pl505")
+autoplay = true
 
 [connection signal="body_entered" from="transition_area" to="transition_area" method="_on_body_entered"]

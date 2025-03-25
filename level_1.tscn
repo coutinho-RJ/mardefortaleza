@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=4 uid="uid://vxicll3yldk8"]
+[gd_scene load_steps=23 format=4 uid="uid://vxicll3yldk8"]
 
 [ext_resource type="Texture2D" uid="uid://doq6x5oog6gel" path="res://sprites/Cute_Fantasy_Free/Cute_Fantasy_Free/Tiles/Beach_Tile.png" id="1_yjl2t"]
 [ext_resource type="Texture2D" uid="uid://ps3ag2frebfx" path="res://sprites/Cute_Fantasy_Free/Cute_Fantasy_Free/Tiles/Water_Tile.png" id="2_c5ro0"]
@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://be63g5jlcx5xb" path="res://prefables/NPC/npc.tscn" id="9_52jre"]
 [ext_resource type="PackedScene" uid="uid://capo8nbctq4r7" path="res://prefables/boat.tscn" id="9_gk3p6"]
 [ext_resource type="Script" path="res://Terrain/transition_area.gd" id="10_vl3vc"]
+[ext_resource type="AudioStream" uid="uid://bdp4troioqiko" path="res://3D/Sound/CidadeSound.wav" id="11_wii4a"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_nn74c"]
 texture = ExtResource("1_yjl2t")
@@ -225,5 +226,9 @@ shape = SubResource("RectangleShape2D_wqbbr")
 [node name="player" parent="." instance=ExtResource("4_a5pni")]
 z_index = 1
 position = Vector2(-181, -72)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("11_wii4a")
+autoplay = true
 
 [connection signal="body_entered" from="transition_area" to="transition_area" method="_on_body_entered"]

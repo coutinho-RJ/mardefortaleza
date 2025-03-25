@@ -13,7 +13,7 @@ extends VehicleBody3D
 @export var rear_left_wheel: VehicleWheel3D = null
 @export var rear_right_wheel: VehicleWheel3D = null
 
-@export var health := 5
+@export var health := 10
 var is_dead := false
 var knockbacked := false
 var gravity = 0
