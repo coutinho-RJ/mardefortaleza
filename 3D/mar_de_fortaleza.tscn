@@ -1,5 +1,4 @@
-[gd_scene load_steps=34 format=3 uid="uid://isywsonkg0e8"]
-
+[gd_scene load_steps=47 format=3 uid="uid://isywsonkg0e8"]
 
 [ext_resource type="Script" path="res://3D/mar_de_fortaleza.gd" id="1_18jg7"]
 [ext_resource type="Texture2D" uid="uid://bl46u7hb7j1ns" path="res://3D/autumn_field_puresky_4k.hdr" id="1_cciaj"]
@@ -21,6 +20,7 @@
 [ext_resource type="PackedScene" uid="uid://bawptdk2w1ekw" path="res://3D/conjuntopedras1.tscn" id="18_xbvf6"]
 [ext_resource type="PackedScene" uid="uid://c3s8gi5ec2awc" path="res://3D/conjuntopedras_3.tscn" id="19_yqepk"]
 [ext_resource type="PackedScene" uid="uid://c2mf0meji1fh1" path="res://3D/grandenaviopirata.tscn" id="20_2mt1p"]
+[ext_resource type="AudioStream" uid="uid://dx4aynnptekrj" path="res://sounds/battleThemeA.mp3" id="21_2fmpe"]
 [ext_resource type="PackedScene" uid="uid://lfgrdq35ctbp" path="res://3D/madeira.tscn" id="21_sg7n0"]
 [ext_resource type="PackedScene" uid="uid://bxrhnwbfvs82i" path="res://3D/ilhao_1.tscn" id="24_p2myl"]
 [ext_resource type="PackedScene" uid="uid://dww2qrcc03lc1" path="res://3D/GLB Piratas/palm-detailed-straight.glb" id="25_b7mrs"]
@@ -28,8 +28,8 @@
 [ext_resource type="PackedScene" uid="uid://do5ygwsl3u3j1" path="res://3D/GLB Piratas/hole.glb" id="27_at6qa"]
 [ext_resource type="PackedScene" uid="uid://5vcyhu467ts2" path="res://3D/GLB Piratas/chest.glb" id="28_dpkhl"]
 [ext_resource type="PackedScene" uid="uid://ccvb2qwb2cpk2" path="res://3D/GLB Piratas/Steve.glb" id="30_cvi0v"]
+[ext_resource type="AudioStream" uid="uid://dlwqrq01iyb1h" path="res://sounds/Waterworks.ogg" id="30_vecul"]
 [ext_resource type="PackedScene" uid="uid://be0p3jvj7tdsk" path="res://3D/GLB Piratas/Princess Peach %F0%9F%8D%91.glb" id="31_rofaw"]
-
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_csuu8"]
 panorama = ExtResource("1_cciaj")
@@ -186,6 +186,11 @@ transform = Transform3D(1, 1.45519e-11, 0, 0, 1, 0, 0, 1.86265e-09, 1, 0, 0, 0)
 
 [node name="nav_agent" type="NavigationAgent3D" parent="NavigationRegion3D/NavioInimigo"]
 
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="NavigationRegion3D/NavioInimigo"]
+stream = ExtResource("21_2fmpe")
+autoplay = true
+max_distance = 1500.0
+
 [node name="ilhao1" parent="." instance=ExtResource("24_p2myl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25.919, 0.961929, -1.91125)
 
@@ -271,6 +276,14 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 34.2019, 0, 66.4915)
 [node name="Barco" parent="." instance=ExtResource("2_7tsr2")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.1444, 1.4888, -16.5388)
 
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("30_vecul")
+volume_db = -7.0
+autoplay = true
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.169343, 0.0607284, -0.0873788, 0.104125, -0.0607231, 0.159595, 0.0219303, -0.180623, -0.0830319, 0, 27.9272, 0)
+sky_mode = 1
+
 [connection signal="pressed" from="game_over/menu_game_over/Tentar_btn" to="game_over" method="_on_tentar_btn_pressed"]
 [connection signal="pressed" from="game_over/menu_game_over/Desistir_btn2" to="game_over" method="_on_desistir_btn_2_pressed"]
-
