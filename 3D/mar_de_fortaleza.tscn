@@ -1,4 +1,5 @@
-[gd_scene load_steps=45 format=3 uid="uid://isywsonkg0e8"]
+[gd_scene load_steps=34 format=3 uid="uid://isywsonkg0e8"]
+
 
 [ext_resource type="Script" path="res://3D/mar_de_fortaleza.gd" id="1_18jg7"]
 [ext_resource type="Texture2D" uid="uid://bl46u7hb7j1ns" path="res://3D/autumn_field_puresky_4k.hdr" id="1_cciaj"]
@@ -28,6 +29,7 @@
 [ext_resource type="PackedScene" uid="uid://5vcyhu467ts2" path="res://3D/GLB Piratas/chest.glb" id="28_dpkhl"]
 [ext_resource type="PackedScene" uid="uid://ccvb2qwb2cpk2" path="res://3D/GLB Piratas/Steve.glb" id="30_cvi0v"]
 [ext_resource type="PackedScene" uid="uid://be0p3jvj7tdsk" path="res://3D/GLB Piratas/Princess Peach %F0%9F%8D%91.glb" id="31_rofaw"]
+
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_csuu8"]
 panorama = ExtResource("1_cciaj")
@@ -271,3 +273,4 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.1444, 1.4888, -16.5388)
 
 [connection signal="pressed" from="game_over/menu_game_over/Tentar_btn" to="game_over" method="_on_tentar_btn_pressed"]
 [connection signal="pressed" from="game_over/menu_game_over/Desistir_btn2" to="game_over" method="_on_desistir_btn_2_pressed"]
+
