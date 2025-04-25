@@ -37,6 +37,33 @@ func _on_nao_pressed():
 	button_no.visible = false
 	dialog_panel.visible = false
 
+func _on_level2_pressed():
+	var cutscene = get_tree().get_first_node_in_group("cutscene")
+	var body = get_tree().get_first_node_in_group("player")
+	var level_1 = get_tree().get_first_node_in_group("level_1")
+	var objects = get_tree().get_first_node_in_group("visible")
+	var missao2 = get_tree().get_first_node_in_group("missao2")
+	
+	body.idle_left()
+	body.set_process(false)
+	body.set_physics_process(false)
+	
+	button_yes.visible = false
+	button_no.visible = false
+	dialog_panel.visible = false
+	dialog_label.visible = false
+	objects.visible = false
+	missao2.visible = true
+	
+	
+	cutscene.play("missao_2")
+	
+	await get_tree().create_timer(16).timeout
+	
+	get_tree().change_scene_to_file("res://Terrain/terrain_teste_2.tscn")
+	
+	
+
 func _on_Area2D_body_entered(body):
 	if body.name == "player":
 		player_in_area = true

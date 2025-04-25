@@ -82,12 +82,25 @@ offset_right = 200.0
 offset_bottom = 23.0
 
 [node name="HBoxContainer" type="HBoxContainer" parent="DialogPanel"]
-layout_mode = 0
-offset_left = 160.0
-offset_top = 32.0
-offset_right = 241.0
-offset_bottom = 72.0
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 25.5
+offset_top = -16.0
+offset_right = 175.5
+offset_bottom = 15.0
+grow_horizontal = 2
+grow_vertical = 0
 scale = Vector2(0.5, 0.5)
+
+[node name="level_2" type="Button" parent="DialogPanel/HBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 4
+text = "Level_2
+"
 
 [node name="sim" type="Button" parent="DialogPanel/HBoxContainer"]
 layout_mode = 2
@@ -95,9 +108,11 @@ text = "Sim"
 
 [node name="nao" type="Button" parent="DialogPanel/HBoxContainer"]
 layout_mode = 2
+size_flags_horizontal = 0
 text = "Não"
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
 [connection signal="body_exited" from="Area2D" to="." method="_on_Area2D_body_exited"]
+[connection signal="pressed" from="DialogPanel/HBoxContainer/level_2" to="." method="_on_level2_pressed"]
 [connection signal="pressed" from="DialogPanel/HBoxContainer/sim" to="." method="_on_sim_pressed"]
 [connection signal="pressed" from="DialogPanel/HBoxContainer/nao" to="." method="_on_nao_pressed"]

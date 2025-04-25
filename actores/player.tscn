@@ -16,6 +16,23 @@ func _ready():
 	if GerenciadorCena.cena_anterior == get_tree().current_scene.scene_file_path:
 		position = GerenciadorCena.ultima_posicao
 
+func stop_player():
+	velocity = Vector2.ZERO
+	
+	if last_direction == \"up\":
+		texture.play(\"idle_back\")
+	elif last_direction == \"down\":
+		texture.play(\"idle_front\")
+	else:
+		texture.play(\"idle_right\")
+		texture.flip_h = last_direction == \"left\"
+
+func idle_left():
+	last_direction = \"left\"
+	texture.play(\"idle_right\")
+	texture.flip_h = true
+
+
 func _physics_process(delta: float) -> void:
 	var direction = Vector2.ZERO
 
@@ -369,7 +386,7 @@ limit_right = 1152
 limit_bottom = 641
 limit_smoothed = true
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." groups=["sprite"]]
 position = Vector2(211, 146)
 scale = Vector2(1.69375, 1.86875)
 sprite_frames = SubResource("SpriteFrames_4y2u6")
