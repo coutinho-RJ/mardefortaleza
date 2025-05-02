@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://by1msqx6ts2gg"]
+
+[ext_resource type="PackedScene" uid="uid://cji0y1c8td5s" path="res://3D/GLB Piratas/cannon-mobile.glb" id="1_nctp8"]
+[ext_resource type="Script" path="res://canhaofase_02.gd" id="2_2k4qx"]
+[ext_resource type="Script" path="res://Timer_Canhao.gd" id="3_yjpx3"]
+
+[node name="canhaofase02" instance=ExtResource("1_nctp8")]
+script = ExtResource("2_2k4qx")
+
+[node name="RayCast3D" type="RayCast3D" parent="." index="1"]
+transform = Transform3D(1, 0, 0, 0, 0.992546, -0.121869, 0, 0.121869, 0.992546, 0, 1.23703, 0)
+target_position = Vector3(0, 0, 45)
+collision_mask = 2
+collide_with_areas = true
+collide_with_bodies = false
+
+[node name="Timer_Canhao" type="Timer" parent="." index="2"]
+script = ExtResource("3_yjpx3")
+
+[connection signal="timeout" from="Timer_Canhao" to="." method="habilitar_tiro"]

@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://u6bu8oiwa3ns"]
+
+[ext_resource type="PackedScene" uid="uid://c53yldl0t4e7s" path="res://3D/GLB Piratas/Target.glb" id="1_b8si5"]
+
+[node name="alvofase02" instance=ExtResource("1_b8si5")]

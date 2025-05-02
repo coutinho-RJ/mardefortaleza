@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://3D/madeira.gd" id="1_fws0y"]
 [ext_resource type="PackedScene" uid="uid://ch8txmj3f7v5e" path="res://3D/GLB Piratas/platform-planks.glb" id="1_pdih6"]
-[ext_resource type="AudioStream" uid="uid://bfjnb0wshlbij" path="res://3D/Sound/Coletaritens.wav" id="3_f63xu"]
+[ext_resource type="AudioStream" uid="uid://fn3pgvl37wuo" path="res://3D/Sound/coletar_madeira.wav" id="3_wb36p"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_dygxh"]
 size = Vector3(2.15201, 0.831055, 2.85802)
@@ -18,7 +18,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0965118, 0.16748, -0.013954
 shape = SubResource("BoxShape3D_dygxh")
 
 [node name="coletar" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("3_f63xu")
+stream = ExtResource("3_wb36p")
 volume_db = 24.0
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

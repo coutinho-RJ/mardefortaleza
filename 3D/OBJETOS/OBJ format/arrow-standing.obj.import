@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://crr0ge3248fj2"
+path="res://.godot/imported/arrow-standing.obj-636dcc0cc4de409cfac7988e8b344aa5.mesh"
+
+[deps]
+
+files=["res://.godot/imported/arrow-standing.obj-636dcc0cc4de409cfac7988e8b344aa5.mesh"]
+
+source_file="res://3D/OBJETOS/OBJ format/arrow-standing.obj"
+dest_files=["res://.godot/imported/arrow-standing.obj-636dcc0cc4de409cfac7988e8b344aa5.mesh", "res://.godot/imported/arrow-standing.obj-636dcc0cc4de409cfac7988e8b344aa5.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

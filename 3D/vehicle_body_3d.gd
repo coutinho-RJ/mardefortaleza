@@ -3,7 +3,11 @@ extends VehicleBody3D
 #@export (NodePath) var InterfacePath=""
 #var Interface = null
 #signal VidaAlterada
-	
+
+var danos = 0
+
+@onready var tiro = load("res://3D/tiro_personagem.tscn")
+
 @export var engine_force_value: float = 500.0
 @export var steer_value: float = 0.3
 @export var max_steering_angle: float = 60.0
@@ -19,8 +23,14 @@ var knockbacked := false
 var gravity = 0
 var movement_velocity : Vector3
 
+var pode_atirar = false
+
 @onready var madeira_container: HBoxContainer = $HUD/madeira_container
 @onready var madeira := 0
+@onready var direcao_dragao = $PivotDragao
+
+#@onready var escravos: HBoxContainer = $HUD/madeira_container/timer_label	
+#@onready var escravos : = 0
 
 func _ready():
 #	if Interface:
@@ -56,7 +66,7 @@ func _physics_process(delta):
 		steer_angle = steer_value
 	elif Input.is_action_pressed("left"):
 		steer_angle = -steer_value
-
+			
 	steer_angle = clamp(steer_angle, -max_steering_angle, max_steering_angle)
 
 	apply_impulse(basis.z * engine_force)
@@ -64,6 +74,12 @@ func _physics_process(delta):
 	front_left_wheel.steering = steer_angle
 	front_right_wheel.steering = steer_angle
 	
+	if danos > 6:
+		get_tree().change_scene_to_file("res://3D/mar_de_fortaleza_fase2.tscn")
+
+func collect_escravo():
+	pass
+
 func collect_madeira():
 	madeira += 1
 	madeira_container.update_madeira(madeira)
@@ -95,3 +111,10 @@ func _on_hurtbox_body_entered(body):
 		
 		
 		
+
+
+func dano(body: Node3D) -> void:
+	
+	if body.is_in_group("TiroInimigo"):
+		danos += 1
+		body.queue_free()

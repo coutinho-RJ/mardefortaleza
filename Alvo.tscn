@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://b8alybly5etwk"]
+
+[ext_resource type="PackedScene" uid="uid://c53yldl0t4e7s" path="res://3D/GLB Piratas/Target.glb" id="1_6cref"]
+[ext_resource type="Script" path="res://alvo.gd" id="2_p45s5"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_v1kvq"]
+height = 0.2
+radius = 0.28
+
+[node name="Root Scene" instance=ExtResource("1_6cref")]
+script = ExtResource("2_p45s5")
+
+[node name="Area3D" type="Area3D" parent="." index="1"]
+collision_mask = 16
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" index="0"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0.475182, 0.0182369)
+shape = SubResource("CylinderShape3D_v1kvq")
+
+[connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]

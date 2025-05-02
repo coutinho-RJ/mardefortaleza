@@ -25,6 +25,10 @@ GlobalCharacter="*res://Global_Character.gd"
 window/size/viewport_height=641
 window/stretch/mode="canvas_items"
 
+[global_group]
+
+TiroInimigo=""
+
 [input]
 
 up={
@@ -61,12 +65,23 @@ rodar_antihorario={
 "events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":81,"key_label":0,"unicode":113,"location":0,"echo":false,"script":null)
 ]
 }
+atirar={
+"deadzone": 0.5,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":32,"key_label":0,"unicode":32,"location":0,"echo":false,"script":null)
+]
+}
 
 [layer_names]
 
 2d_physics/layer_1="Players"
+3d_physics/layer_1="cenario"
 2d_physics/layer_2="NPC"
+3d_physics/layer_2="personagem"
 2d_physics/layer_3="Animals"
+3d_physics/layer_3="item"
+3d_physics/layer_4="inimigo"
+3d_physics/layer_5="tiro"
+3d_physics/layer_6="tiro_inimigo"
 
 [rendering]
 
