@@ -7,14 +7,14 @@
 script/source = "extends CharacterBody2D
 
 
-const SPEED = 100.0
+const SPEED = 400.0
 
 @onready var texture := $AnimatedSprite2D
 var last_direction = \"front\"
 
 func _ready():
-	if GerenciadorCena.cena_anterior == get_tree().current_scene.scene_file_path:
-		position = GerenciadorCena.ultima_posicao
+	pass
+
 
 func stop_player():
 	velocity = Vector2.ZERO
@@ -393,5 +393,3 @@ sprite_frames = SubResource("SpriteFrames_4y2u6")
 animation = &"run_up"
 autoplay = "idle_front"
 frame_progress = 0.980735
-
-[node name="animator" type="AnimationPlayer" parent="."]

@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://bo77lc621bum8"]
+
+[ext_resource type="Script" path="res://Terrain/transition_area.gd" id="1_uuucj"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ry2tb"]
+size = Vector2(5, 55)
+
+[node name="transition_area" type="Area2D"]
+script = ExtResource("1_uuucj")
+
+[node name="transition_colision_1" type="CollisionShape2D" parent="."]
+position = Vector2(-1.26759e-06, -0.500001)
+rotation = 3.14159
+shape = SubResource("RectangleShape2D_ry2tb")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

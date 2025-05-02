@@ -849,7 +849,9 @@ tile_set = SubResource("TileSet_iymuh")
 position = Vector2(1157, 162)
 
 [node name="player" parent="." instance=ExtResource("21_vx4b1")]
-position = Vector2(-135, 11)
+z_index = 1
+y_sort_enabled = true
+position = Vector2(-193, 12)
 
 [node name="Animals_left" type="Node2D" parent="."]
 z_index = 1
@@ -960,7 +962,5 @@ shape = SubResource("RectangleShape2D_x4u40")
 
 [node name="missao_1" parent="." instance=ExtResource("13_4xkoj")]
 
-[node name="level_1pos" type="Marker2D" parent="." groups=["transition"]]
-position = Vector2(913, 11)
-
-[connection signal="body_entered" from="Area2D" to="missao_1" method="_on_body_entered"]
+[node name="level_1Pos" type="Marker2D" parent="."]
+position = Vector2(1130, 163)
