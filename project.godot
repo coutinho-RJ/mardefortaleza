@@ -17,16 +17,13 @@ config/icon="res://icon.svg"
 
 [autoload]
 
-Global="*res://Global.gd"
+GerenciadorCena="*res://gerenciador_cena.gd"
+GlobalCharacter="*res://Global_Character.gd"
 
 [display]
 
 window/size/viewport_height=641
 window/stretch/mode="canvas_items"
-
-[global_group]
-
-transition=""
 
 [input]
 
@@ -74,5 +71,3 @@ rodar_antihorario={
 [rendering]
 
 textures/canvas_textures/default_texture_filter=0
-renderer/rendering_method="gl_compatibility"
-renderer/rendering_method.mobile="gl_compatibility"

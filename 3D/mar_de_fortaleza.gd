@@ -2,7 +2,7 @@ extends Node3D
 
 @onready var barco = $Barco
 @onready var portal = load("res://3D/FX/Portal.tscn")
-@export var madeiras = 1
+@export var madeiras = 3
 
 var gerar_portal = true
 
