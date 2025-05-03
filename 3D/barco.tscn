@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=4 uid="uid://bkaf3cyayyt5s"]
+[gd_scene load_steps=12 format=4 uid="uid://bkaf3cyayyt5s"]
 
 [ext_resource type="Script" path="res://3D/vehicle_body_3d.gd" id="1_bhyn2"]
 [ext_resource type="PackedScene" uid="uid://bkcdbkfhlm4uj" path="res://3D/heroi.tscn" id="2_cdcr8"]
@@ -107,8 +107,13 @@ shadow_mesh = SubResource("ArrayMesh_pj1bi")
 [sub_resource type="BoxShape3D" id="BoxShape3D_jnu3x"]
 size = Vector3(4.14127, 3.57335, 8.59478)
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_8qa57"]
+size = Vector3(5.33246, 20.6546, 10.0439)
+
 [node name="Barco" type="VehicleBody3D" node_paths=PackedStringArray("front_left_wheel", "front_right_wheel", "rear_left_wheel", "rear_right_wheel")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.4888, 0)
+collision_layer = 2
+collision_mask = 9
 mass = 1500.0
 script = ExtResource("1_bhyn2")
 front_left_wheel = NodePath("wheel_left2")
@@ -160,7 +165,20 @@ suspension_stiffness = 5.0
 [node name="Heroi" parent="." instance=ExtResource("2_cdcr8")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.10359, 1.3808, -3.28395)
 
-[node name="Low Poly Dratini" parent="." instance=ExtResource("3_rvho0")]
-transform = Transform3D(-0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, -0.707107, 0, 1.90763, 5.09784)
-
 [node name="HUD" parent="." instance=ExtResource("4_l1c04")]
+
+[node name="PivotDragao" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.8387, 5.4031)
+
+[node name="Low Poly Dratini" parent="PivotDragao" instance=ExtResource("3_rvho0")]
+transform = Transform3D(-0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, -0.707107, 0, 0.0689321, -0.305255)
+
+[node name="HitBox" type="Area3D" parent="."]
+collision_layer = 2
+collision_mask = 32
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="HitBox"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0705261, 9.8273, 0.538483)
+shape = SubResource("BoxShape3D_8qa57")
+
+[connection signal="body_entered" from="HitBox" to="." method="dano"]

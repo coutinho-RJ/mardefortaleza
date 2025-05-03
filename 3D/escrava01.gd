@@ -1,10 +1,12 @@
 extends Area3D
 
+signal coletado
+
 const ROTATION_SPEED: = 50
 
 var start_pos := position.y
 var end_pos := position.y + 0.5
-@onready var coletar: AudioStreamPlayer = $coletar as AudioStreamPlayer
+@onready var coletarescravo: AudioStreamPlayer = $AudioStreamPlayer as AudioStreamPlayer
 
 
 # Called when the node enters the scene tree for the first time.
@@ -22,9 +24,10 @@ func _process(delta: float) -> void:
 func _on_body_entered(body: Node3D) -> void:
 	if body.name == "Barco":
 		$CollisionShape3D.disabled = true
-		$"platform-planks2".visible = false
-		body.collect_madeira()
-		coletar.play()
-		await coletar.finished
+		visible = false
+		body.collect_escravo()
+		coletarescravo.play()
+		await coletarescravo.finished
+		emit_signal("coletado")
+		print("coletado")
 		queue_free()
-		

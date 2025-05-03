@@ -1,0 +1,26 @@
+[gd_scene load_steps=5 format=3 uid="uid://bembtlxiye70i"]
+
+[ext_resource type="PackedScene" uid="uid://bkaf3cyayyt5s" path="res://3D/barco.tscn" id="1_jcmlm"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1visw"]
+metallic = 1.0
+roughness = 0.3
+
+[sub_resource type="BoxMesh" id="BoxMesh_epher"]
+size = Vector3(200, 0.2, 200)
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_axm2l"]
+data = PackedVector3Array(-100, 0.1, 100, 100, 0.1, 100, -100, -0.1, 100, 100, 0.1, 100, 100, -0.1, 100, -100, -0.1, 100, 100, 0.1, -100, -100, 0.1, -100, 100, -0.1, -100, -100, 0.1, -100, -100, -0.1, -100, 100, -0.1, -100, 100, 0.1, 100, 100, 0.1, -100, 100, -0.1, 100, 100, 0.1, -100, 100, -0.1, -100, 100, -0.1, 100, -100, 0.1, -100, -100, 0.1, 100, -100, -0.1, -100, -100, 0.1, 100, -100, -0.1, 100, -100, -0.1, -100, 100, 0.1, 100, -100, 0.1, 100, 100, 0.1, -100, -100, 0.1, 100, -100, 0.1, -100, 100, 0.1, -100, -100, -0.1, 100, 100, -0.1, 100, -100, -0.1, -100, 100, -0.1, 100, 100, -0.1, -100, -100, -0.1, -100)
+
+[node name="Node3D" type="Node3D"]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D"]
+material_override = SubResource("StandardMaterial3D_1visw")
+mesh = SubResource("BoxMesh_epher")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_axm2l")
+
+[node name="Barco" parent="." instance=ExtResource("1_jcmlm")]

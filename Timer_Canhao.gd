@@ -1,11 +1,13 @@
-extends Node
+extends Timer
 
+class_name Timer_Canhao
 
-@onready var health = 1000
-
+@onready var canhao
 # Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass # Replace with function body.
+func start_new(canhao, time):
+	self.canhao = canhao
+	start(time)
+	
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
