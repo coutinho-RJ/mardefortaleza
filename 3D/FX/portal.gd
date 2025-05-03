@@ -13,4 +13,7 @@ func _process(delta):
 
 func mudarcena(body: Node3D) -> void:
 	if body.name == "Barco":
-		get_tree().change_scene_to_file("res://level_1.tscn")
+		call_deferred("change")
+
+func change():
+	get_tree().change_scene_to_file("res://Terrain/level_1_5.tscn")

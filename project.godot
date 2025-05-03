@@ -19,6 +19,7 @@ config/icon="res://icon.svg"
 
 GerenciadorCena="*res://gerenciador_cena.gd"
 GlobalCharacter="*res://Global_Character.gd"
+Global="*res://Global.gd"
 
 [display]
 

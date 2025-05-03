@@ -14,7 +14,7 @@
 [ext_resource type="PackedScene" uid="uid://b6sliw7yypo5c" path="res://actores/player.tscn" id="21_vx4b1"]
 [ext_resource type="PackedScene" uid="uid://cxbe6wxobdms5" path="res://actores/pig.tscn" id="22_dcb7r"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ot4tj"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1xkmg"]
 texture = ExtResource("6_jlxac")
 0:0/0 = 0
 1:0/0 = 0
@@ -33,7 +33,7 @@ texture = ExtResource("6_jlxac")
 1:5/0 = 0
 2:5/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rphuf"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wwgj0"]
 texture = ExtResource("7_6e5sm")
 separation = Vector2i(1, 1)
 0:0/0 = 0
@@ -170,10 +170,10 @@ separation = Vector2i(1, 1)
 9:1/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_jvx1f"]
-sources/5 = SubResource("TileSetAtlasSource_ot4tj")
-sources/8 = SubResource("TileSetAtlasSource_rphuf")
+sources/5 = SubResource("TileSetAtlasSource_1xkmg")
+sources/8 = SubResource("TileSetAtlasSource_wwgj0")
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ym51x"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_saghf"]
 texture = ExtResource("7_6e5sm")
 separation = Vector2i(1, 1)
 0:0/0 = 0
@@ -325,9 +325,9 @@ separation = Vector2i(1, 1)
 
 [sub_resource type="TileSet" id="TileSet_g72b4"]
 physics_layer_0/collision_layer = 1
-sources/0 = SubResource("TileSetAtlasSource_ym51x")
+sources/0 = SubResource("TileSetAtlasSource_saghf")
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_mh7u4"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_dx3i0"]
 texture = ExtResource("7_6e5sm")
 separation = Vector2i(1, 1)
 0:0/0 = 0
@@ -508,9 +508,9 @@ separation = Vector2i(1, 1)
 
 [sub_resource type="TileSet" id="TileSet_l6n3u"]
 physics_layer_0/collision_layer = 1
-sources/3 = SubResource("TileSetAtlasSource_mh7u4")
+sources/3 = SubResource("TileSetAtlasSource_dx3i0")
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_sc7qd"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jcbbp"]
 texture = ExtResource("17_4akap")
 1:0/0 = 0
 2:0/0 = 0
@@ -529,7 +529,7 @@ texture = ExtResource("17_4akap")
 1:4/0 = 0
 2:4/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wjilm"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3kuka"]
 texture = ExtResource("18_3ko1h")
 1:0/0 = 0
 0:0/0 = 0
@@ -551,10 +551,10 @@ texture = ExtResource("18_3ko1h")
 2:2/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_dekbn"]
-sources/1 = SubResource("TileSetAtlasSource_sc7qd")
-sources/2 = SubResource("TileSetAtlasSource_wjilm")
+sources/1 = SubResource("TileSetAtlasSource_jcbbp")
+sources/2 = SubResource("TileSetAtlasSource_3kuka")
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_g5rgl"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_cm7y0"]
 texture = ExtResource("19_k18vu")
 0:0/0 = 0
 1:0/0 = 0
@@ -616,7 +616,7 @@ texture = ExtResource("19_k18vu")
 2:11/0 = 0
 3:11/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_b00tx"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1wskt"]
 texture = ExtResource("7_6e5sm")
 separation = Vector2i(1, 1)
 0:0/0 = 0
@@ -761,10 +761,10 @@ separation = Vector2i(1, 1)
 
 [sub_resource type="TileSet" id="TileSet_gw48m"]
 physics_layer_0/collision_layer = 1
-sources/0 = SubResource("TileSetAtlasSource_g5rgl")
-sources/1 = SubResource("TileSetAtlasSource_b00tx")
+sources/0 = SubResource("TileSetAtlasSource_cm7y0")
+sources/1 = SubResource("TileSetAtlasSource_1wskt")
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_m7ktw"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gopv0"]
 texture = ExtResource("17_4akap")
 1:0/0 = 0
 1:0/0/z_index = 2
@@ -804,7 +804,7 @@ texture = ExtResource("17_4akap")
 2:4/0/y_sort_origin = 4
 
 [sub_resource type="TileSet" id="TileSet_iymuh"]
-sources/0 = SubResource("TileSetAtlasSource_m7ktw")
+sources/0 = SubResource("TileSetAtlasSource_gopv0")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_x4u40"]
 size = Vector2(12.5, 70)

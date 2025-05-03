@@ -8,7 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://tnf3xn1al0k6" path="res://sprites/Cute_Fantasy_Free/Cute_Fantasy_Free/Tiles/Path_Tile.png" id="5_y01uc"]
 [ext_resource type="Texture2D" uid="uid://bai64uu8go46p" path="res://sprites/Cute_Fantasy_Free/Cute_Fantasy_Free/Outdoor decoration/Bridge_Wood.png" id="7_41oji"]
 [ext_resource type="PackedScene" uid="uid://be63g5jlcx5xb" path="res://prefables/NPC/npc.tscn" id="9_52jre"]
-[ext_resource type="PackedScene" uid="uid://capo8nbctq4r7" path="res://prefables/boat.tscn" id="9_gk3p6"]
+[ext_resource type="PackedScene" uid="uid://capo8nbctq4r7" path="res://prefables/Barco/boat.tscn" id="9_gk3p6"]
 [ext_resource type="Script" path="res://Terrain/transition_area.gd" id="10_vl3vc"]
 [ext_resource type="AudioStream" uid="uid://bvvh64udiypko" path="res://sounds/POL-sea-waves.wav" id="11_kovoh"]
 [ext_resource type="PackedScene" uid="uid://b3pdgkojkoctv" path="res://cutscenes/missao_2.tscn" id="12_g84ro"]
@@ -455,7 +455,6 @@ position = Vector2(677, 67)
 
 [node name="transition_area" type="Area2D" parent="."]
 script = ExtResource("10_vl3vc")
-cena_destino = "res://3D/mar_de_fortaleza.tscn"
 
 [node name="transition_colision_1" type="CollisionShape2D" parent="transition_area"]
 position = Vector2(3, 80)

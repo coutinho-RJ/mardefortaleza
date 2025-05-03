@@ -1,0 +1,79 @@
+extends CharacterBody2D
+
+@onready var dialog_panel = $DialogPanel
+@onready var dialog_label = $DialogPanel/Label
+@onready var button_yes = $DialogPanel/HBoxContainer/sim
+@onready var button_no = $DialogPanel/HBoxContainer/nao
+@onready var button_levle_2 = $DialogPanel/HBoxContainer/level_2
+
+var player_in_area = false
+
+func _ready():
+	dialog_panel.visible = false
+	dialog_label.autowrap_mode = TextServer.AUTOWRAP_WORD
+	var new_font_size = 8
+	dialog_label.add_theme_font_size_override("font_size", new_font_size)
+	
+	
+func _process(delta):
+	if player_in_area and Input.is_action_just_pressed("ui_accept"):
+		show_dialog()
+
+func show_dialog():
+	dialog_panel.visible = true
+	dialog_label.text = "Gostaria de fazer uma viagem?"
+	button_yes.visible = true	
+	button_no.visible = true
+	button_levle_2.visible = true
+	
+func _on_sim_pressed():
+	dialog_label.text = "Prepare-se"
+	button_yes.visible = false
+	button_no.visible = false
+	button_levle_2.visible = false
+	
+	
+	await get_tree().create_timer(2).timeout
+	get_tree().change_scene_to_file("res://prefables/mar_de_fortaleza.tscn")
+	
+func _on_nao_pressed():
+	button_yes.visible = false
+	button_no.visible = false
+	dialog_panel.visible = false
+	button_levle_2.visible = false
+
+func _on_level2_pressed():
+	var cutscene = get_tree().get_first_node_in_group("cutscene")
+	var body = get_tree().get_first_node_in_group("player")
+	var level_1 = get_tree().get_first_node_in_group("level_1")
+	var objects = get_tree().get_first_node_in_group("visible")
+	var missao2 = get_tree().get_first_node_in_group("missao2")
+	
+	body.idle_left()
+	body.set_process(false)
+	body.set_physics_process(false)
+	
+	button_yes.visible = false
+	button_no.visible = false
+	dialog_panel.visible = false
+	dialog_label.visible = false
+	objects.visible = false
+	missao2.visible = true
+	
+	
+	cutscene.play("missao_2")
+	
+	await get_tree().create_timer(16).timeout
+	
+	get_tree().change_scene_to_file("res://Terrain/terrain_teste_2.tscn")
+	
+	
+
+func _on_Area2D_body_entered(body):
+	if body.name == "player":
+		player_in_area = true
+
+func _on_Area2D_body_exited(body):
+	if body.name == "player":
+		player_in_area = false
+		dialog_panel.visible = false
